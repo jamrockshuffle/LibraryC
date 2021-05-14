@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Навігація</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+
+    <style>
+        .btn {
+            display: inline-block;
+            background: grey;
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 14pt;
+        }
+
+        body{
+            background: #212529;
+            color: white;
+        }
+
+        td{
+            font-size: 16pt;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover{
+            color: #c9c9c9;
+            transition: .1s;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1 align="center"><a href="/common/titulka">Курсова робота на тему "Бібліотека"</a></h1>
+
+<br>
+<br>
+
+<!-- <a href="/common/titulka" class="btn">TITULKA</a> -->
+
+<div style="margin: 0 auto; width: 100%">
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>ПЕРЕЛІК ТАБЛИЦЬ</th>
+        </tr>
+
+
+        <tr>
+            <td>Бібліотечні книги</td>
+            <td>
+                <a href="/ui/book/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Автори</td>
+            <td>
+                <a href="/ui/author/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Жанри</td>
+            <td>
+                <a href="/ui/genre/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Видавці</td>
+            <td>
+                <a href="/ui/publisher/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Стелажі</td>
+            <td>
+                <a href="/ui/stillage/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Читачі</td>
+            <td>
+                <a href="/ui/register/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Категорії знижок</td>
+            <td>
+                <a href="/ui/discountsystem/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Орендовані книги</td>
+            <td>
+                <a href="/ui/renting/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Штрафи (по книжках)</td>
+            <td>
+                <a href="/ui/penalty/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Штрафи (перелік)</td>
+            <td>
+                <a href="/ui/penaltysystem/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Робітники</td>
+            <td>
+                <a href="/ui/personnel/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Посади</td>
+            <td>
+                <a href="/ui/position/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Зміни</td>
+            <td>
+                <a href="/ui/shift/get/all">
+                    <button class="btn btn-light btn-sm">Перейти</button>
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

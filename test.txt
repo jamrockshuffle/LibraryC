@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Титульна сторінка</title>
+
+    <style>
+        .container{
+            width: 1500px;
+            height: 1250px;
+        }
+
+        .work1 {
+            margin-left: 670px;
+        }
+
+        .work1Move1 {
+            font-size: 12pt;
+            margin-left: 150px;
+        }
+
+        .work1Move2 {
+            font-size: 12pt;
+            margin-left: 80px;
+        }
+
+        .work1Move3 {
+            font-size: 12pt;
+            margin-left: 100px;
+        }
+
+        .work2 {
+            margin-left: 300px;
+        }
+
+        .work2Move1 {
+            font-size: 12pt;
+            margin-left: 160px;
+        }
+
+        .work3 {
+            margin-left: 300px;
+        }
+    </style>
+
+</head>
+<body>
+
+<br>
+
+<div class="container">
+
+    <h2 align="center">
+
+        Міністерство освіти і науки України
+        <br><br>
+        Чернівецький національний
+        університет імені Юрія Федьковича
+        <br>
+        Інститут фізико-технічних та
+        комп’ютерних наук
+        <br>
+        Кафедра програмного забезпечення
+        комп’ютерних систем
+    </h2>
+
+    <br><br><br>
+
+    <h1 align="center">
+        Створення потокового сервісу з системою
+        <br>
+        рекомендацій контенту
+    </h1>
+    <br>
+    <h2 align="center">
+        ДИПЛОМНИЙ ПРОЕКТ (РОБОТА)
+    </h2>
+
+    <h2 align="center">
+        Рівень вищої освіти – другий (магістерський)
+    </h2>
+
+    <br><br><br><br>
+
+    <div class="work1">
+        <big>
+            <big>
+                Виконав(ла): студент(ка) 2 курсу, групи 243
+                <br>
+                спеціальності
+                <br>
+                <u>
+                    121 - Інженерія програмного забезпечення
+                </u>
+
+                <div class="work1Move1">
+                    (шифр - назва спеціальності)
+                </div>
+
+                <br>
+
+                <u>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;Бідюк Микола Валентинович
+                </u>
+
+                <div class="work1Move2">
+                    (прізвище, ім’я, по-батькові студента)
+                </div>
+
+                <br>
+
+                Керівник
+                <u>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;Прохоров Г.В
+                </u>
+
+                <div class="work1Move3">
+                    (підпис)&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;(прізвище та ініціали)
+                </div>
+            </big>
+        </big>
+    </div>
+
+    <br><br><br>
+
+    <div class="work2">
+        <big>
+            <big>
+                Нормконтролер____________________________
+
+                <div class="work2Move1">
+                    (підпис) &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;(прізвище та ініціали)
+                </div>
+            </big>
+        </big>
+    </div>
+
+    <br><br><br>
+
+    <div class="work3">
+        <big>
+            <big>
+                <b>
+                    До захисту допущено:
+                </b>
+
+                <br><br>
+
+                <b>
+                    Протокол засідання кафедри №____
+                </b>
+
+                <br><br>
+
+                від „___”______________2020 р.
+
+                <br><br>
+
+                зав. кафедри__________проф. Остапов С.Е.
+            </big>
+        </big>
+
+    </div>
+
+    <br><br><br><br>
+
+    <div align="center">
+        <big>
+            <big>
+                Чернівці – 2020
+            </big>
+        </big>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
