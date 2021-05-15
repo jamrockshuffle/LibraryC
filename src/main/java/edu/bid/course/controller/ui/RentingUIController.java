@@ -167,15 +167,12 @@ public class RentingUIController {
 
         rentingForm.setId(id);
 
+
         String book = rentingRepository.findById(id)
-                .stream()
-                .map(r -> r.getBook().getName())
-                .collect(Collectors.joining());
+                .get().getBook().getName();
 
         String reader = rentingRepository.findById(id)
-                .stream()
-                .map(r -> r.getReader().getLastName())
-                .collect(Collectors.joining());
+                .get().getReader().getLastName();
 
         rentingForm.setBook(book);
         rentingForm.setReader(reader);
@@ -186,9 +183,7 @@ public class RentingUIController {
         rentingForm.setPenaltySum(String.valueOf(rentingRepository.findById(id).get().getPenaltySum()));
 
         String person = rentingRepository.findById(id)
-                .stream()
-                .map(r -> r.getRentingPerson().getLastName())
-                .collect(Collectors.joining());
+                .get().getRentingPerson().getLastName();
 
         rentingForm.setRentingPerson(person);
 

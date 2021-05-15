@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -185,14 +186,10 @@ public class BookUIController {
         bookForm.setName(bookRepository.findById(id).get().getName());
 
         String author = bookRepository.findById(id)
-                .stream()
-                .map(r -> r.getAuthorName().getName())
-                .collect(Collectors.joining());
+                .get().getAuthorName().getName();
 
         String genre = bookRepository.findById(id)
-                .stream()
-                .map(r -> r.getGenreName().getName())
-                .collect(Collectors.joining());
+                .get().getGenreName().getName();
 
         bookForm.setAuthorName(author);
         bookForm.setGenreName(genre);
@@ -200,14 +197,10 @@ public class BookUIController {
         bookForm.setYearOfPublishing(String.valueOf(bookRepository.findById(id).get().getYearOfPublishing()));
 
         String publisher = bookRepository.findById(id)
-                .stream()
-                .map(r -> r.getPublisherName().getName())
-                .collect(Collectors.joining());
+                .get().getPublisherName().getName();
 
         String stillage = bookRepository.findById(id)
-                .stream()
-                .map(r -> r.getStillageID().getStillageId())
-                .collect(Collectors.joining());
+                .get().getStillageID().getStillageId();
 
         bookForm.setPublisherName(publisher);
         bookForm.setStillageID(stillage);

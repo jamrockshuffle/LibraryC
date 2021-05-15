@@ -140,9 +140,7 @@ public class RegisterUIController {
         registerForm.setPhoneNumber(registerRepository.findById(id).get().getPhoneNumber());
 
         String category = registerRepository.findById(id)
-                .stream()
-                .map(r -> r.getCategory().getCategory())
-                .collect(Collectors.joining());
+                .get().getCategory().getCategory();
 
         registerForm.setCategory(category);
 

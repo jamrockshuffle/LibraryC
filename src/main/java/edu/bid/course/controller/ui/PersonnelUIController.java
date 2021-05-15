@@ -158,14 +158,10 @@ public class PersonnelUIController {
         personnelForm.setPatronymic(personnelRepository.findById(id).get().getPatronymic());
 
         String position = personnelRepository.findById(id)
-                .stream()
-                .map(r -> r.getPosition().getName())
-                .collect(Collectors.joining());
+                .get().getPosition().getName();
 
         String shift = personnelRepository.findById(id)
-                .stream()
-                .map(r -> r.getShift().getName())
-                .collect(Collectors.joining());
+                .get().getShift().getName();
 
         personnelForm.setPosition(position);
         personnelForm.setShift(shift);

@@ -134,15 +134,12 @@ public class PenaltyUIController {
         PenaltyForm penaltyForm = new PenaltyForm();
         penaltyForm.setId(id);
 
+
         String rented = penaltyRepository.findById(id)
-                .stream()
-                .map(r -> r.getRentedBook().getBook().getName())
-                .collect(Collectors.joining());
+                .get().getRentedBook().getBook().getName();
 
         String penalty = penaltyRepository.findById(id)
-                .stream()
-                .map(r -> r.getPenaltyClause().getDamageDescription())
-                .collect(Collectors.joining());
+                .get().getPenaltyClause().getDamageDescription();
 
         penaltyForm.setRentedBook(rented);
         penaltyForm.setPenaltyClause(penalty);
