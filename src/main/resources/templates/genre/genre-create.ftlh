@@ -62,7 +62,7 @@
 <div style="margin-top: 90px; width:100%">
     <fieldset style=" margin-left: auto; margin-right: auto">
 
-        <a href="http://localhost:1010/ui/genre/get/all" class="fa fa-reply" title="Назад"></a>
+        <a href="/ui/genre/get/all" class="fa fa-reply" title="Назад"></a>
 
         <legend style="text-align: center;">Add Genre</legend>
         <hr class="h-color">

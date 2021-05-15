@@ -30,7 +30,7 @@
 </head>
 <body>
 
-<a href="http://localhost:1010/" class="fa fa-reply" title="Назад"></a>
+<a href="/" class="fa fa-reply" title="Назад"></a>
 
 <div style="margin: 0 auto; width: 100%">
     <table class="table table-dark table-hover">

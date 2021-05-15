@@ -89,7 +89,7 @@
 <div style="margin-top: 10px; width:100%">
     <fieldset style=" margin-left: auto; margin-right: auto">
 
-        <a href="http://localhost:1010/ui/personnel/get/all" class="fa fa-reply" title="Назад"></a>
+        <a href="/ui/personnel/get/all" class="fa fa-reply" title="Назад"></a>
 
         <legend style="text-align: center;">Add Worker</legend>
         <hr class="h-color">

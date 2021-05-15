@@ -89,7 +89,7 @@
 <div style="margin-top: 10px; width:100%">
     <fieldset style=" margin-left: auto; margin-right: auto">
 
-        <a href="http://localhost:1010/ui/register/get/all" class="fa fa-reply" title="Назад"></a>
+        <a href="/ui/register/get/all" class="fa fa-reply" title="Назад"></a>
 
         <legend style="text-align: center;">Update Member</legend>
         <hr class="h-color">

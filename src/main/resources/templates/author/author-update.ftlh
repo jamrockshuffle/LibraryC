@@ -63,7 +63,7 @@
 <div style="margin-top: 90px; width:100%">
     <fieldset style=" margin-left: auto; margin-right: auto">
 
-        <a href="http://localhost:1010/ui/author/get/all" class="fa fa-reply" title="Назад"></a>
+        <a href="/ui/author/get/all" class="fa fa-reply" title="Назад"></a>
 
         <legend style="text-align: center;">Update Author</legend>
         <hr class="h-color">
