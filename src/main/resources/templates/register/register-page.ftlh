@@ -36,8 +36,8 @@
     <table class="table table-dark table-hover">
         <tr>
             <th>ID</th>
-            <th>First Name</th>
             <th>Last Name</th>
+            <th>First Name</th>
             <th>Patronymic</th>
             <th>Birthday</th>
             <th>Address</th>
@@ -53,8 +53,8 @@
         <#list members as member>
             <tr>
                 <td>${member.id}</td>
-                <td>${member.firstName}</td>
                 <td>${member.lastName}</td>
+                <td>${member.firstName}</td>
                 <td>${member.patronymic}</td>
                 <td>${member.birthday}</td>
                 <td>${member.address}</td>
