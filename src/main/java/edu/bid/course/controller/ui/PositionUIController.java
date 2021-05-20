@@ -8,6 +8,7 @@ import edu.bid.course.service.position.PositionServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,7 @@ import java.util.List;
  */
 
 @RequestMapping("/ui/position")
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @Controller
 public class PositionUIController {
 
@@ -44,6 +46,7 @@ public class PositionUIController {
         return "position/position-page";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
     public String delete(Model model, @PathVariable String id){
 
@@ -57,6 +60,7 @@ public class PositionUIController {
     @Autowired
     PositionServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
 
@@ -70,6 +74,7 @@ public class PositionUIController {
         return "position/position-create";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("positionForm") PositionForm positionForm){
 
@@ -84,6 +89,7 @@ public class PositionUIController {
         return "redirect:/ui/position/get/all";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
 
@@ -98,6 +104,7 @@ public class PositionUIController {
         return "position/position-update";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")
     public String update(Model model, @ModelAttribute("positionUpdForm") PositionForm positionForm, @PathVariable String id){
 

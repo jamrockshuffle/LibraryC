@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -30,6 +31,7 @@ import java.util.Map;
 
 @Tag(name = "PositionControllerAPI", description = "Mostly GET methods with Position collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/position")
 public class PositionController {
 
@@ -62,6 +64,7 @@ public class PositionController {
         return positionRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position deletion",
             description = " Deletes Position with specified id")
     @GetMapping("/delete/{id}")
@@ -80,6 +83,7 @@ public class PositionController {
     @Autowired
     PositionServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position creation",
             description = " Adds new Position to the Position list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -90,6 +94,7 @@ public class PositionController {
         return service.create(position);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position updation",
             description = " Updates Position with specified id")
     @PostMapping("/update")

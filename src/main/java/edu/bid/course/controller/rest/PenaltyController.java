@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,7 @@ import java.util.Map;
 
 @Tag(name = "PenaltyControllerAPI", description = "Mostly GET methods with Penalty collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/penalty")
 public class PenaltyController {
 
@@ -60,6 +62,7 @@ public class PenaltyController {
         return penaltyRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty deletion",
             description = " Deletes Penalty with specified id")
     @GetMapping("/delete/{id}")
@@ -78,6 +81,7 @@ public class PenaltyController {
     @Autowired
     PenaltyServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty creation",
             description = " Adds new Penalty to the Penalty list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -88,6 +92,7 @@ public class PenaltyController {
         return service.create(penalty);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty updation",
             description = " Updates Penalty with specified id")
     @PostMapping("/update")

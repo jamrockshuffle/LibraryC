@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,7 @@ import java.util.Map;
 
 @Tag(name = "StillageControllerAPI", description = "Mostly GET methods with Stillage collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/stillage")
 public class StillageController {
 
@@ -60,6 +62,7 @@ public class StillageController {
         return stillageRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage deletion",
             description = " Deletes Stillage with specified id")
     @GetMapping("/delete/{id}")
@@ -78,6 +81,7 @@ public class StillageController {
     @Autowired
     StillageServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage creation",
             description = " Adds new Stillage to the Stillage list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -88,6 +92,7 @@ public class StillageController {
         return service.create(stillage);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage updation",
             description = " Updates Stillage with specified id")
     @PostMapping("/update")

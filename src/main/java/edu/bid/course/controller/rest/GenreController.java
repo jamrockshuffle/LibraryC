@@ -13,6 +13,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +30,7 @@ import java.util.Map;
 
 @Tag(name = "GenreControllerAPI", description = "Mostly GET methods with DiscountSystem collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/genre")
 public class GenreController {
 
@@ -61,6 +63,7 @@ public class GenreController {
         return genreRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre deletion",
             description = " Deletes Genre with specified id")
     @GetMapping("/delete/{id}")
@@ -79,6 +82,7 @@ public class GenreController {
     @Autowired
     GenreServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre creation",
             description = " Adds new Genre to the Genre list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -89,6 +93,7 @@ public class GenreController {
         return service.create(genre);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre updation",
             description = " Updates Genre with specified id")
     @PostMapping("/update")

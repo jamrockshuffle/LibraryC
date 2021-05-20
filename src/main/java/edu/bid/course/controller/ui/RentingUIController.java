@@ -14,6 +14,7 @@ import edu.bid.course.service.renting.RentingServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ import java.util.stream.Collectors;
  */
 
 @RequestMapping("/ui/renting")
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @Controller
 public class RentingUIController {
 
@@ -54,6 +56,7 @@ public class RentingUIController {
         return "renting/renting-page";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
     public String delete(Model model, @PathVariable String id){
 
@@ -85,6 +88,7 @@ public class RentingUIController {
     @Autowired
     PersonnelServiceImpl personnelService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
 
@@ -128,6 +132,7 @@ public class RentingUIController {
         return "renting/renting-create";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("rentingForm") RentingForm rentingForm){
 
@@ -160,6 +165,7 @@ public class RentingUIController {
         return "redirect:/ui/renting/get/all";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
 
@@ -218,6 +224,7 @@ public class RentingUIController {
         return "renting/renting-update";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")
     public String create(Model model, @ModelAttribute("rentingUpdForm") RentingForm rentingForm, @PathVariable String id){
 

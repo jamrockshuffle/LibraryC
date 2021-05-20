@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -29,6 +30,7 @@ import java.util.Map;
 
 @Tag(name = "RegisterControllerAPI", description = "Mostly GET methods with Register collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/register")
 public class RegisterController {
 
@@ -61,6 +63,7 @@ public class RegisterController {
         return registerRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member deletion",
             description = " Deletes Member with specified id")
     @GetMapping("/delete/{id}")
@@ -79,6 +82,7 @@ public class RegisterController {
     @Autowired
     RegisterServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member creation",
             description = " Adds new Member to the Register list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -89,6 +93,7 @@ public class RegisterController {
         return service.create(register);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member updation",
             description = " Updates Member with specified id")
     @PostMapping("/update")

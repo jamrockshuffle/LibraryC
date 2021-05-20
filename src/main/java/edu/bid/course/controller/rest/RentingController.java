@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +28,7 @@ import java.util.Map;
 
 @Tag(name = "RentingControllerAPI", description = "Mostly GET methods with Renting collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/renting")
 public class RentingController {
 
@@ -59,6 +61,7 @@ public class RentingController {
         return rentingRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book deletion",
             description = " Deletes Rented Book with specified id")
     @GetMapping("/delete/{id}")
@@ -77,6 +80,7 @@ public class RentingController {
     @Autowired
     RentingServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book creation",
             description = " Adds new Rented Book to the Renting list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -87,6 +91,7 @@ public class RentingController {
         return service.create(renting);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book updation",
             description = " Updates Rented Book with specified id")
     @PostMapping("/update")

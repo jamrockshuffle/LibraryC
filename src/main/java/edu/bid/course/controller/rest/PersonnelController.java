@@ -13,6 +13,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -33,6 +34,7 @@ import java.util.Map;
 
 @Tag(name = "PersonnelControllerAPI", description = "Mostly GET methods with Personnel collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/personnel")
 public class PersonnelController {
 
@@ -65,6 +67,7 @@ public class PersonnelController {
         return personnelRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Worker deletion",
             description = " Deletes Worker with specified id")
     @GetMapping("/delete/{id}")
@@ -83,6 +86,7 @@ public class PersonnelController {
     @Autowired
     PersonnelServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Worker creation",
             description = " Adds new Worker to the Personnel list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -93,6 +97,7 @@ public class PersonnelController {
         return service.create(personnel);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Damage updation",
             description = " Updates Damage with specified id")
     @PostMapping("/update")

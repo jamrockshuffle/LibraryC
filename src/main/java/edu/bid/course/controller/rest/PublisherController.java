@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.Map;
 
 @Tag(name = "PublisherControllerAPI", description = "Mostly GET methods with Publisher collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/publisher")
 public class PublisherController {
 
@@ -51,6 +53,7 @@ public class PublisherController {
         return publisherRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher deletion",
             description = " Deletes Publisher with specified id")
     @GetMapping("/delete/{id}")
@@ -69,6 +72,7 @@ public class PublisherController {
     @Autowired
     PublisherServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher creation",
             description = " Adds new Publisher to the Publisher list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -79,6 +83,7 @@ public class PublisherController {
         return service.create(publisher);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher updation",
             description = " Updates Publisher with specified id")
     @PostMapping("/update")

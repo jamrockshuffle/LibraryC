@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -28,6 +29,7 @@ import java.util.Map;
 
 @Tag(name = "ShiftControllerAPI", description = "Mostly GET methods with Shift collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/shift")
 public class ShiftController {
 
@@ -60,6 +62,7 @@ public class ShiftController {
         return shiftRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift deletion",
             description = " Deletes Shift with specified id")
     @GetMapping("/delete/{id}")
@@ -78,6 +81,7 @@ public class ShiftController {
     @Autowired
     ShiftServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift creation",
             description = " Adds new Shift to the Shift list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -88,6 +92,7 @@ public class ShiftController {
         return service.create(shift);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift updation",
             description = " Updates Shift with specified id")
     @PostMapping("/update")

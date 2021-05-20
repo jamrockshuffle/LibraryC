@@ -10,6 +10,7 @@ import edu.bid.course.service.publisher.PublisherServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,7 @@ import java.util.List;
  */
 
 @RequestMapping("/ui/publisher")
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @Controller
 public class PublisherUIController {
 
@@ -46,6 +48,7 @@ public class PublisherUIController {
         return "publisher/publisher-page";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
     public String delete(Model model, @PathVariable String id){
 
@@ -59,6 +62,7 @@ public class PublisherUIController {
     @Autowired
     PublisherServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
 
@@ -72,6 +76,7 @@ public class PublisherUIController {
         return "publisher/publisher-create";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("publisherForm") PublisherForm publisherForm){
 
@@ -86,6 +91,7 @@ public class PublisherUIController {
         return "redirect:/ui/publisher/get/all";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
 
@@ -101,6 +107,7 @@ public class PublisherUIController {
         return "publisher/publisher-update";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")
     public String update(Model model, @ModelAttribute("publisherUpdForm") PublisherForm publisherForm, @PathVariable String id){
 

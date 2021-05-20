@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +30,7 @@ import java.util.Map;
 
 @Tag(name = "DiscountSystemControllerAPI", description = "Mostly GET methods with DiscountSystem collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/discountsystem")
 public class DiscountSystemController {
 
@@ -61,6 +63,7 @@ public class DiscountSystemController {
         return discountSystemRepository.findById(id).orElse(null);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Discount Category deletion",
             description = " Deletes Discount Category with specified id")
     @GetMapping("/delete/{id}")
@@ -79,6 +82,7 @@ public class DiscountSystemController {
     @Autowired
     DiscountSystemServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Discount Category creation",
             description = " Adds new Discount Category to the DiscountSystem list. Id to be created is UUID type ")
     @PostMapping("/create")
@@ -89,6 +93,7 @@ public class DiscountSystemController {
         return service.create(discountSystem);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Book updation",
             description = " Updates Book with specified id")
     @PostMapping("/update")

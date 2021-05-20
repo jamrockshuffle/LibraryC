@@ -11,6 +11,7 @@ import edu.bid.course.service.shift.ShiftServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +28,7 @@ import java.util.List;
  */
 
 @RequestMapping("/ui/shift")
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @Controller
 public class ShiftUIController {
 
@@ -47,6 +49,7 @@ public class ShiftUIController {
         return "shift/shift-page";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
     public String delete(Model model, @PathVariable String id){
 
@@ -60,6 +63,7 @@ public class ShiftUIController {
     @Autowired
     ShiftServiceImpl service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
 
@@ -73,6 +77,7 @@ public class ShiftUIController {
         return "shift/shift-create";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("shiftForm") ShiftForm shiftForm){
 
@@ -87,6 +92,7 @@ public class ShiftUIController {
         return "redirect:/ui/shift/get/all";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
 
@@ -101,6 +107,7 @@ public class ShiftUIController {
         return "shift/shift-update";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")
     public String create(Model model, @ModelAttribute("shiftUpdForm") ShiftForm shiftForm, @PathVariable String id){
 
