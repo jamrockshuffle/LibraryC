@@ -15,6 +15,10 @@ import java.time.LocalDateTime;
  * @Version: Author: 1.0
  */
 
+/**
+ * This is a model to hold information about Authors
+ */
+
 @Schema(description = " Author List? Entity")
 @Document("Author")
 public class Author {
