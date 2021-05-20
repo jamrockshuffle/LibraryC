@@ -87,7 +87,7 @@ public class AuthorUIController {
 
         service.create(author);
 
-        LOGGER.info(" Create Author (UI) request has been called. A new Position has been created. ");
+        LOGGER.info(" Create Author (UI) request has been called. A new Author has been created. ");
 
         return "redirect:/ui/author/get/all";
     }
