@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +26,7 @@ import java.util.Map;
 
 @Tag(name = "AuthorControllerAPI", description = "Mostly GET methods with Author collection")
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 @RequestMapping("api/author")
 public class AuthorController {
 
@@ -59,6 +61,7 @@ public class AuthorController {
 
     @Operation(summary = " Author deletion",
             description = " Deletes Author with specified id")
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/delete/{id}")
     public List<Author> deleteById(@PathVariable("id")
                              @Parameter(name = "id",
@@ -77,6 +80,7 @@ public class AuthorController {
 
     @Operation(summary = " Author creation",
             description = " Adds new author to the Author list. Id to be created is UUID type ")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public Author create(@RequestBody Author author) {
 
@@ -87,6 +91,7 @@ public class AuthorController {
 
     @Operation(summary = " Author updation",
             description = " Updates Author with specified id")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update")
     public Author update(@RequestBody Author author) {
 
