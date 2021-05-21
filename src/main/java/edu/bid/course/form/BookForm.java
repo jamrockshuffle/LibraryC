@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.time.Year;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Books
  * course.BookForm
  *
  * @Autor: Kolja

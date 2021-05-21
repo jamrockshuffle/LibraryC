@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Author model
  * course.AuthorController
  *
  * @Autor: Kolja
@@ -35,6 +35,10 @@ public class AuthorController {
     @Autowired
     AuthorRepository authorRepository;
 
+    /**
+     * Method to display all (raw) data from Author model
+     */
+
     @Operation(summary = " Get all Authors",
             description = " Finds and displays all Authors")
     @RequestMapping("/get/all")
@@ -45,6 +49,10 @@ public class AuthorController {
         return authorRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Author model with specified id
+     */
 
     @Operation(summary = " Get one Author",
             description = " Finds and displays Author with specified id")
@@ -58,6 +66,10 @@ public class AuthorController {
 
         return authorRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Author model
+     */
 
     @Operation(summary = " Author deletion",
             description = " Deletes Author with specified id")
@@ -75,6 +87,10 @@ public class AuthorController {
         return authorRepository.findAll();
     }
 
+    /**
+     * Method to create new data with auto-generated id in Author model
+     */
+
     @Autowired
     AuthorServiceImpl service;
 
@@ -89,6 +105,10 @@ public class AuthorController {
         return service.create(author);
     }
 
+    /**
+     * Method to update data with specified id from Author model
+     */
+
     @Operation(summary = " Author updation",
             description = " Updates Author with specified id")
     @PreAuthorize("hasRole('ADMIN')")
@@ -99,6 +119,10 @@ public class AuthorController {
 
         return service.update(author);
     }
+
+    /**
+     * Method to count and sort all data in Author model based on Book model
+     */
 
     @Operation(summary = " Count all authors based on books",
             description = " Finds and displays counted and sorted authors")

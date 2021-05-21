@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Genre model
  * course.GenreDAOImpl
  *
  * @Autor: Kolja
@@ -28,6 +28,10 @@ public class GenreDAOImpl implements IGenreDAO{
     @Autowired
     GenreRepository genreRepository;
 
+    /**
+     * Create new Genre method with auto-generated id and created_at
+     */
+
     @Override
     public Genre create(Genre genre) {
 
@@ -41,6 +45,10 @@ public class GenreDAOImpl implements IGenreDAO{
         genreRepository.save(genre);
         return genre;
     }
+
+    /**
+     * Update Genre method with auto-generated modified_at
+     */
 
     @Override
     public Genre update(Genre genre) {

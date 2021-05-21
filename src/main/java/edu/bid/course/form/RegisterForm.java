@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Readers
  * course.RegisterForm
  *
  * @Autor: Kolja

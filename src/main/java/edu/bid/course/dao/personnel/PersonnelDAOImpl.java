@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Personnel model
  * course.PersonnelDAOImpl
  *
  * @Autor: Kolja
@@ -30,6 +30,10 @@ public class PersonnelDAOImpl implements IPersonnelDAO{
     @Autowired
     PersonnelRepository personnelRepository;
 
+    /**
+     * Create new Worker method with auto-generated id and created_at
+     */
+
     @Override
     public Personnel create(Personnel personnel) {
 
@@ -43,6 +47,10 @@ public class PersonnelDAOImpl implements IPersonnelDAO{
         personnelRepository.save(personnel);
         return personnel;
     }
+
+    /**
+     * Update Worker method with auto-generated modified_at
+     */
 
     @Override
     public Personnel update(Personnel personnel) {

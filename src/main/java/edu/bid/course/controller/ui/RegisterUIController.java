@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Register model
  * course.RegisterUIController
  *
  * @Autor: Kolja
@@ -42,6 +42,10 @@ public class RegisterUIController {
     @Autowired
     RegisterRepository registerRepository;
 
+    /**
+     * Method to display all data from Register model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -53,6 +57,10 @@ public class RegisterUIController {
 
         return "register/register-page";
     }
+
+    /**
+     * Method to delete data with specified id from Register model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -73,6 +81,10 @@ public class RegisterUIController {
 
     @Autowired
     DiscountSystemRepository discountSystemRepository;
+
+    /**
+     * Method to display form where all creation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
@@ -103,6 +115,10 @@ public class RegisterUIController {
         return "register/register-create";
     }
 
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Register model and return get/all method
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("registerForm") RegisterForm registerForm){
@@ -129,6 +145,10 @@ public class RegisterUIController {
 
         return "redirect:/ui/register/get/all";
     }
+
+    /**
+     * Method to display form where all updation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
@@ -163,6 +183,10 @@ public class RegisterUIController {
 
         return "register/register-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Register model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

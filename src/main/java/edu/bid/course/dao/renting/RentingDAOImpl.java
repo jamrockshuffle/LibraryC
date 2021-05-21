@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Renting model
  * course.RentingDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,10 @@ public class RentingDAOImpl implements IRentingDAO{
     @Autowired
     RentingRepository rentingRepository;
 
+    /**
+     * Create new Rented Book method with auto-generated id and created_at
+     */
+
     @Override
     public Renting create(Renting renting) {
 
@@ -42,6 +46,10 @@ public class RentingDAOImpl implements IRentingDAO{
         rentingRepository.save(renting);
         return renting;
     }
+
+    /**
+     * Update Rented Book method with auto-generated modified_at
+     */
 
     @Override
     public Renting update(Renting renting) {

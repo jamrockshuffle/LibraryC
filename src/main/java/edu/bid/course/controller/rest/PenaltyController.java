@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Penalty model
  * course.PenaltyController
  *
  * @Autor: Kolja
@@ -38,6 +38,10 @@ public class PenaltyController {
     @Autowired
     PenaltyRepository penaltyRepository;
 
+    /**
+     * Method to display all (raw) data from Penalty model
+     */
+
     @Operation(summary = " Get all Penalties",
             description = " Finds and displays all Penalties")
     @RequestMapping("/get/all")
@@ -48,6 +52,10 @@ public class PenaltyController {
         return penaltyRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Penalty model with specified id
+     */
 
     @Operation(summary = " Get one Penalty",
             description = " Finds and displays Penalty with specified id")
@@ -61,6 +69,10 @@ public class PenaltyController {
 
         return penaltyRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Penalty model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty deletion",
@@ -81,6 +93,10 @@ public class PenaltyController {
     @Autowired
     PenaltyServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Penalty model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty creation",
             description = " Adds new Penalty to the Penalty list. Id to be created is UUID type ")
@@ -92,6 +108,10 @@ public class PenaltyController {
         return service.create(penalty);
     }
 
+    /**
+     * Method to update data with specified id from Penalty model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Penalty updation",
             description = " Updates Penalty with specified id")
@@ -102,6 +122,10 @@ public class PenaltyController {
 
         return service.update(penalty);
     }
+
+    /**
+     * Method to count and sort all data in Renting model based on Penalty model
+     */
 
     @Operation(summary = " Count all Rented Books based on Damages",
             description = " Finds and displays counted and sorted rented books")

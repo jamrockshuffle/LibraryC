@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Renting model
  * course.RentingUIController
  *
  * @Autor: Kolja
@@ -44,6 +44,10 @@ public class RentingUIController {
     @Autowired
     RentingRepository rentingRepository;
 
+    /**
+     * Method to display all data from Renting model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -55,6 +59,10 @@ public class RentingUIController {
 
         return "renting/renting-page";
     }
+
+    /**
+     * Method to delete data with specified id from Renting model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -87,6 +95,10 @@ public class RentingUIController {
 
     @Autowired
     PersonnelServiceImpl personnelService;
+
+    /**
+     * Method to display form where all creation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
@@ -132,6 +144,10 @@ public class RentingUIController {
         return "renting/renting-create";
     }
 
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Renting model and return get/all method
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("rentingForm") RentingForm rentingForm){
@@ -164,6 +180,10 @@ public class RentingUIController {
 
         return "redirect:/ui/renting/get/all";
     }
+
+    /**
+     * Method to display form where all updation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
@@ -223,6 +243,11 @@ public class RentingUIController {
 
         return "renting/renting-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Renting model and return get/all method
+     */
+
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

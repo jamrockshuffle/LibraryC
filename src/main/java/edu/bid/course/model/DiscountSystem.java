@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Discount Categories
  * course.DiscountSystem
  *
  * @Autor: Kolja

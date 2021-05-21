@@ -21,7 +21,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Position model DAO methods
  * course.PositionServiceImpl
  *
  * @Autor: Kolja

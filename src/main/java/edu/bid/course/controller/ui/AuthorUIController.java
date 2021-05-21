@@ -19,7 +19,7 @@ import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Author model
  * course.AuthorUIController
  *
  * @Autor: Kolja
@@ -37,6 +37,10 @@ public class AuthorUIController {
     @Autowired
     AuthorRepository authorRepository;
 
+    /**
+     * Method to display all data from Author model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -48,6 +52,10 @@ public class AuthorUIController {
 
         return "author/author-page";
     }
+
+    /**
+     * Method to delete data with specified id from Author model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -63,6 +71,10 @@ public class AuthorUIController {
     @Autowired
     AuthorServiceImpl service;
 
+    /**
+     * Method to display form where all creation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
@@ -76,6 +88,10 @@ public class AuthorUIController {
 
         return "author/author-create";
     }
+
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Author model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
@@ -91,6 +107,10 @@ public class AuthorUIController {
 
         return "redirect:/ui/author/get/all";
     }
+
+    /**
+     * Method to display form where all updation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
@@ -109,6 +129,10 @@ public class AuthorUIController {
 
         return "author/author-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Author model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

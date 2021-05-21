@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is an interface representation of Books collection in MongoDB
  * course.BookRepository
  *
  * @Autor: Kolja

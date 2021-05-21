@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Author model DAO methods
  * course.AuthorServiceImpl
  *
  * @Autor: Kolja

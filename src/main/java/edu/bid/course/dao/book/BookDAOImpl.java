@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Book model
  * course.BookDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,10 @@ public class BookDAOImpl implements IBookDAO{
     @Autowired
     BookRepository bookRepository;
 
+    /**
+     * Create new Book method with auto-generated id and created_at
+     */
+
     @Override
     public Book create(Book book) {
 
@@ -42,6 +46,10 @@ public class BookDAOImpl implements IBookDAO{
         bookRepository.save(book);
         return book;
     }
+
+    /**
+     * Update Book method with auto-generated modified_at
+     */
 
     @Override
     public Book update(Book book) {

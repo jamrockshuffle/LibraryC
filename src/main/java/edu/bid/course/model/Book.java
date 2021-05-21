@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.time.Year;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Books
  * course.Book
  *
  * @Autor: Kolja

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Library Workers
  * course.PersonnelForm
  *
  * @Autor: Kolja

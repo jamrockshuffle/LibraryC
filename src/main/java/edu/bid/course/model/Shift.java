@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Worker Shifts
  * course.Shift
  *
  * @Autor: Kolja

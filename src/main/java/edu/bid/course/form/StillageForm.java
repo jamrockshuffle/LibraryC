@@ -3,7 +3,7 @@ package edu.bid.course.form;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Stillages
  * course.StillageForm
  *
  * @Autor: Kolja

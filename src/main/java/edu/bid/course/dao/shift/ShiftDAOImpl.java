@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Shift model
  * course.ShiftDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,10 @@ public class ShiftDAOImpl implements IShiftDAO{
     @Autowired
     ShiftRepository shiftRepository;
 
+    /**
+     * Create new Shift method with auto-generated id and created_at
+     */
+
     @Override
     public Shift create(Shift shift) {
 
@@ -42,6 +46,10 @@ public class ShiftDAOImpl implements IShiftDAO{
         shiftRepository.save(shift);
         return shift;
     }
+
+    /**
+     * Update Shift method with auto-generated modified_at
+     */
 
     @Override
     public Shift update(Shift shift) {

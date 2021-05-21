@@ -21,7 +21,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for PenaltySystem model
  * course.PenaltySystemUIController
  *
  * @Autor: Kolja
@@ -39,6 +39,10 @@ public class PenaltySystemUIController {
     @Autowired
     PenaltySystemRepository penaltySystemRepository;
 
+    /**
+     * Method to display all data from PenaltySystem model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -50,6 +54,10 @@ public class PenaltySystemUIController {
 
         return "penaltysystem/penaltysystem-page";
     }
+
+    /**
+     * Method to delete data with specified id from PenaltySystem model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -64,6 +72,10 @@ public class PenaltySystemUIController {
 
     @Autowired
     PenaltySystemServiceImpl service;
+
+    /**
+     * Method to display form where all creation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
@@ -82,6 +94,10 @@ public class PenaltySystemUIController {
         return "penaltysystem/penaltysystem-create";
     }
 
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in PenaltySystem model and return get/all method
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("penaltySystemForm") PenaltySystemForm penaltySystemForm){
@@ -97,6 +113,10 @@ public class PenaltySystemUIController {
 
         return "redirect:/ui/penaltysystem/get/all";
     }
+
+    /**
+     * Method to display form where all updation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
@@ -115,6 +135,10 @@ public class PenaltySystemUIController {
 
         return "penaltysystem/penaltysystem-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in PenaltySystem model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

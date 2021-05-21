@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for PenaltySystem model DAO methods
  * course.PenaltySystemServiceImpl
  *
  * @Autor: Kolja

@@ -5,7 +5,7 @@ import edu.bid.course.model.Renting;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Penalties
  * course.PenaltyForm
  *
  * @Autor: Kolja

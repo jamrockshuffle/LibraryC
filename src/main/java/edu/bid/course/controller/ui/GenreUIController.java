@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Genre model
  * course.GenreUIController
  *
  * @Autor: Kolja
@@ -38,6 +38,10 @@ public class GenreUIController {
     @Autowired
     GenreRepository genreRepository;
 
+    /**
+     * Method to display all data from Genre model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -49,6 +53,10 @@ public class GenreUIController {
 
         return "genre/genre-page";
     }
+
+    /**
+     * Method to delete data with specified id from Genre model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -64,6 +72,10 @@ public class GenreUIController {
     @Autowired
     GenreServiceImpl service;
 
+    /**
+     * Method to display form where all creation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
@@ -77,6 +89,10 @@ public class GenreUIController {
 
         return "genre/genre-create";
     }
+
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Genre model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
@@ -93,6 +109,10 @@ public class GenreUIController {
         return "redirect:/ui/genre/get/all";
     }
 
+    /**
+     * Method to display form where all updation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
@@ -107,6 +127,10 @@ public class GenreUIController {
 
         return "genre/genre-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Genre model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

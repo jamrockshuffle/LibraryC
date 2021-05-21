@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Library Workers
  * course.Personnel
  *
  * @Autor: Kolja

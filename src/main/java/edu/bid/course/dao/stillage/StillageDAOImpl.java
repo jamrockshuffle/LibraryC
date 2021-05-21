@@ -12,6 +12,15 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 
+/**
+ * Data access object (DAO) for Stillage model
+ * course.StillageDAOImpl
+ *
+ * @Autor: Kolja
+ * @Date: 05.05.2021
+ * @Version: StillageDAOImpl: 1.0
+ */
+
 @Repository
 public class StillageDAOImpl implements IStillageDAO{
 
@@ -19,6 +28,10 @@ public class StillageDAOImpl implements IStillageDAO{
 
     @Autowired
     StillageRepository stillageRepository;
+
+    /**
+     * Create new Stillage method with auto-generated id and created_at
+     */
 
     @Override
     public Stillage create(Stillage stillage) {
@@ -33,6 +46,10 @@ public class StillageDAOImpl implements IStillageDAO{
         stillageRepository.save(stillage);
         return stillage;
     }
+
+    /**
+     * Update Stillage method with auto-generated modified_at
+     */
 
     @Override
     public Stillage update(Stillage stillage) {

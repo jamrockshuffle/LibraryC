@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Genre model
  * course.GenreController
  *
  * @Autor: Kolja
@@ -39,6 +39,10 @@ public class GenreController {
     @Autowired
     GenreRepository genreRepository;
 
+    /**
+     * Method to display all (raw) data from Genre model
+     */
+
     @Operation(summary = " Get all Genres",
             description = " Finds and displays all Genres")
     @RequestMapping("/get/all")
@@ -49,6 +53,11 @@ public class GenreController {
         return genreRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Genre model with specified id
+     */
+
 
     @Operation(summary = " Get one Genre",
             description = " Finds and displays Genre with specified id")
@@ -62,6 +71,10 @@ public class GenreController {
 
         return genreRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Genre model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre deletion",
@@ -82,6 +95,10 @@ public class GenreController {
     @Autowired
     GenreServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Genre model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre creation",
             description = " Adds new Genre to the Genre list. Id to be created is UUID type ")
@@ -93,6 +110,10 @@ public class GenreController {
         return service.create(genre);
     }
 
+    /**
+     * Method to update data with specified id from Genre model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Genre updation",
             description = " Updates Genre with specified id")
@@ -103,6 +124,10 @@ public class GenreController {
 
         return service.update(genre);
     }
+
+    /**
+     * Method to count and sort all data in Genre model based on Book model
+     */
 
     @Operation(summary = " Count all genres based on books",
             description = " Finds and displays counted and sorted genres")

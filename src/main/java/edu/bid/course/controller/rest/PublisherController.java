@@ -18,6 +18,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * API methods for Publisher model
+ * course.PublisherController
+ *
+ * @Autor: Kolja
+ * @Date: 05.05.2021
+ * @Version: PublisherController: 1.0
+ */
+
+
 @Tag(name = "PublisherControllerAPI", description = "Mostly GET methods with Publisher collection")
 @RestController
 @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
@@ -29,6 +39,10 @@ public class PublisherController {
     @Autowired
     PublisherRepository publisherRepository;
 
+    /**
+     * Method to display all (raw) data from Publisher model
+     */
+
     @Operation(summary = " Get all Publishers",
             description = " Finds and displays all Publishers")
     @RequestMapping("/get/all")
@@ -39,6 +53,10 @@ public class PublisherController {
         return publisherRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Publisher model with specified id
+     */
 
     @Operation(summary = " Get one Publisher",
             description = " Finds and displays Publisher with specified id")
@@ -52,6 +70,10 @@ public class PublisherController {
 
         return publisherRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Publisher model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher deletion",
@@ -72,6 +94,10 @@ public class PublisherController {
     @Autowired
     PublisherServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Publisher model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher creation",
             description = " Adds new Publisher to the Publisher list. Id to be created is UUID type ")
@@ -83,6 +109,10 @@ public class PublisherController {
         return service.create(publisher);
     }
 
+    /**
+     * Method to update data with specified id from Publisher model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Publisher updation",
             description = " Updates Publisher with specified id")
@@ -93,6 +123,10 @@ public class PublisherController {
 
         return service.update(publisher);
     }
+
+    /**
+     * Method to count and sort all data in Publisher model based on Book model
+     */
 
     @Operation(summary = " Count all publishers based on books",
             description = " Finds and displays counted and sorted publishers")

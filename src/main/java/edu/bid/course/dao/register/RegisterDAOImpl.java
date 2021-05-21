@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Register model
  * course.RegisterDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,10 @@ public class RegisterDAOImpl implements IRegisterDAO{
     @Autowired
     RegisterRepository registerRepository;
 
+    /**
+     * Create new Reader method with auto-generated id and created_at
+     */
+
     @Override
     public Register create(Register register) {
 
@@ -42,6 +46,10 @@ public class RegisterDAOImpl implements IRegisterDAO{
         registerRepository.save(register);
         return register;
     }
+
+    /**
+     * Update Reader method with auto-generated modified_at
+     */
 
     @Override
     public Register update(Register register) {

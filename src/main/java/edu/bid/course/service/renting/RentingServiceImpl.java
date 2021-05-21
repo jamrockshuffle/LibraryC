@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Renting model DAO methods
  * course.RentingServiceImpl
  *
  * @Autor: Kolja

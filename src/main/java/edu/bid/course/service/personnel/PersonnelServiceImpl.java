@@ -20,7 +20,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Personnel model DAO methods
  * course.PersonnelServiceImpl
  *
  * @Autor: Kolja

@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Register model
  * course.RegisterController
  *
  * @Autor: Kolja
@@ -39,6 +39,10 @@ public class RegisterController {
     @Autowired
     RegisterRepository registerRepository;
 
+    /**
+     * Method to display all (raw) data from Register model
+     */
+
     @Operation(summary = " Get all Members",
             description = " Finds and displays all Members")
     @RequestMapping("/get/all")
@@ -49,6 +53,10 @@ public class RegisterController {
         return registerRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Register model with specified id
+     */
 
     @Operation(summary = " Get one Member",
             description = " Finds and displays Member with specified id")
@@ -62,6 +70,10 @@ public class RegisterController {
 
         return registerRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Register model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member deletion",
@@ -82,6 +94,10 @@ public class RegisterController {
     @Autowired
     RegisterServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Register model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member creation",
             description = " Adds new Member to the Register list. Id to be created is UUID type ")
@@ -92,6 +108,10 @@ public class RegisterController {
 
         return service.create(register);
     }
+
+    /**
+     * Method to update data with specified id from Register model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Member updation",
@@ -104,6 +124,10 @@ public class RegisterController {
         return service.update(register);
     }
 
+    /**
+     * Method to count and sort all data in Register model based on Renting model
+     */
+
     @Operation(summary = " Count all readers based on Rented Books",
             description = " Finds and displays counted and sorted readers")
     @RequestMapping("/get/sorted")
@@ -113,6 +137,10 @@ public class RegisterController {
 
         return service.sortReadersByNumberORentedBooks();
     }
+
+    /**
+     * Method to count and sort all data in Register model based on its birthday field
+     */
 
     @Operation(summary = " Count all readers based on their birthday",
             description = " Finds and displays counted and sorted readers")

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Damages (for Penalties)
  * course.PenaltySystem
  *
  * @Autor: Kolja

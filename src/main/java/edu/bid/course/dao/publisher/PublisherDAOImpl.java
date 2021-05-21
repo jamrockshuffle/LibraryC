@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Publisher model
  * course.PublisherDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,10 @@ public class PublisherDAOImpl implements IPublisherDAO{
     @Autowired
     PublisherRepository publisherRepository;
 
+    /**
+     * Create new Publisher method with auto-generated id and created_at
+     */
+
     @Override
     public Publisher create(Publisher publisher) {
 
@@ -42,6 +46,10 @@ public class PublisherDAOImpl implements IPublisherDAO{
         publisherRepository.save(publisher);
         return publisher;
     }
+
+    /**
+     * Update Publisher method with auto-generated modified_at
+     */
 
     @Override
     public Publisher update(Publisher publisher) {

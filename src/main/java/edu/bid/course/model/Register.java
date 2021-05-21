@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Readers
  * course.Register
  *
  * @Autor: Kolja

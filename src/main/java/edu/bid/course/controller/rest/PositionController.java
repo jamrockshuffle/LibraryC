@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Position model
  * course.PositionController
  *
  * @Autor: Kolja
@@ -40,6 +40,10 @@ public class PositionController {
     @Autowired
     PositionRepository positionRepository;
 
+    /**
+     * Method to display all (raw) data from Position model
+     */
+
     @Operation(summary = " Get all Positions",
             description = " Finds and displays all Positions")
     @RequestMapping("/get/all")
@@ -50,6 +54,10 @@ public class PositionController {
         return positionRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Position model with specified id
+     */
 
     @Operation(summary = " Get one Position",
             description = " Finds and displays Position with specified id")
@@ -63,6 +71,10 @@ public class PositionController {
 
         return positionRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Position model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position deletion",
@@ -83,6 +95,10 @@ public class PositionController {
     @Autowired
     PositionServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Position model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position creation",
             description = " Adds new Position to the Position list. Id to be created is UUID type ")
@@ -93,6 +109,10 @@ public class PositionController {
 
         return service.create(position);
     }
+
+    /**
+     * Method to update data with specified id from Position model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Position updation",
@@ -105,6 +125,10 @@ public class PositionController {
         return service.update(position);
     }
 
+    /**
+     * Method to count and sort all data in Position model based on Personnel model
+     */
+
     @Operation(summary = " Count all positions based on library workers",
             description = " Finds and displays counted and sorted positions")
     @RequestMapping("/get/sorted")
@@ -115,6 +139,10 @@ public class PositionController {
         return service.sortPositionsByNumberOfWorkers();
     }
 
+    /**
+     * Method to find average among all values in each salary field in Personnel model by their position field
+     */
+
     @Operation(summary = " Find and sort average salary of a position based on library workers",
             description = " Finds and displays sorted average salary of a position")
     @RequestMapping("/get/averagesalary")
@@ -124,6 +152,10 @@ public class PositionController {
 
         return service.sortPositionsByAverageSalary();
     }
+
+    /**
+     * Method to count all values in each salary field in Personnel model by their position field
+     */
 
     @Operation(summary = " Find and sort all salary of a position based on library workers",
             description = " Finds and displays sorted all salary of a position")

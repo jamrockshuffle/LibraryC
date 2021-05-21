@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Renting model
  * course.RentingController
  *
  * @Autor: Kolja
@@ -37,6 +37,10 @@ public class RentingController {
     @Autowired
     RentingRepository rentingRepository;
 
+    /**
+     * Method to display all (raw) data from Renting model
+     */
+
     @Operation(summary = " Get all Rented Books",
             description = " Finds and displays all Rented Books")
     @RequestMapping("/get/all")
@@ -47,6 +51,11 @@ public class RentingController {
         return rentingRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Renting model with specified id
+     */
+
 
     @Operation(summary = " Get one Rented Book",
             description = " Finds and displays Rented Book with specified id")
@@ -60,6 +69,10 @@ public class RentingController {
 
         return rentingRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Renting model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book deletion",
@@ -80,6 +93,10 @@ public class RentingController {
     @Autowired
     RentingServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Renting model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book creation",
             description = " Adds new Rented Book to the Renting list. Id to be created is UUID type ")
@@ -90,6 +107,11 @@ public class RentingController {
 
         return service.create(renting);
     }
+
+    /**
+     * Method to update data with specified id from Renting model
+     */
+
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Rented Book updation",
@@ -102,6 +124,10 @@ public class RentingController {
         return service.update(renting);
     }
 
+    /**
+     * Method to count and sort all data in Renting model based on Author model
+     */
+
     @Operation(summary = " Count all authors based on rented books",
             description = " Finds and displays counted and sorted authors")
     @RequestMapping("/get/allauthors")
@@ -111,6 +137,10 @@ public class RentingController {
 
         return service.sortAuthorsByRentedBooks();
     }
+
+    /**
+     * Method to count and sort all data in Renting model based on Genre model
+     */
 
     @Operation(summary = " Count all genres based on rented books",
             description = " Finds and displays counted and sorted genres")

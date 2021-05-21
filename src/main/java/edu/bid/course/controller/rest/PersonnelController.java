@@ -22,15 +22,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Personnel model
  * course.PersonnelController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021
  * @Version: PersonnelController: 1.0
  */
-
-
 
 @Tag(name = "PersonnelControllerAPI", description = "Mostly GET methods with Personnel collection")
 @RestController
@@ -43,6 +41,10 @@ public class PersonnelController {
     @Autowired
     PersonnelRepository personnelRepository;
 
+    /**
+     * Method to display all (raw) data from Personnel model
+     */
+
     @Operation(summary = " Get all Personnel",
             description = " Finds and displays all Personnel")
     @RequestMapping("/get/all")
@@ -53,6 +55,10 @@ public class PersonnelController {
         return personnelRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Personnel model with specified id
+     */
 
     @Operation(summary = " Get one Worker",
             description = " Finds and displays Worker with specified id")
@@ -66,6 +72,10 @@ public class PersonnelController {
 
         return personnelRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Personnel model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Worker deletion",
@@ -86,6 +96,10 @@ public class PersonnelController {
     @Autowired
     PersonnelServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Personnel model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Worker creation",
             description = " Adds new Worker to the Personnel list. Id to be created is UUID type ")
@@ -96,6 +110,10 @@ public class PersonnelController {
 
         return service.create(personnel);
     }
+
+    /**
+     * Method to update data with specified id from Personnel model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Damage updation",
@@ -108,6 +126,10 @@ public class PersonnelController {
         return service.update(personnel);
     }
 
+    /**
+     * Method to count and sort all data in Personnel model based on Renting model
+     */
+
     @Operation(summary = " Count all renting workers based on Rented Books",
             description = " Finds and displays counted and sorted renting workers")
     @RequestMapping("/get/sorted")
@@ -117,6 +139,10 @@ public class PersonnelController {
 
         return service.sortWorkersByNumberORentedBooks();
     }
+
+    /**
+     * Method to count all values in each salary field in Personnel model
+     */
 
     @Operation(summary = " Count all workers salary",
             description = " Finds and displays counted salary of workers")
@@ -128,6 +154,10 @@ public class PersonnelController {
         return service.getAllSalary();
     }
 
+    /**
+     * Method to find average among all values in each salary field in Personnel model
+     */
+
     @Operation(summary = " Find and sort average salary of workers",
             description = " Finds and displays sorted average salary of workers")
     @RequestMapping("/get/averagesalary")
@@ -137,6 +167,10 @@ public class PersonnelController {
 
         return service.getAverageSalary();
     }
+
+    /**
+     * Method to count and sort all data in Personnel model based on its birthday field
+     */
 
     @Operation(summary = " Count all workers based on their birthday",
             description = " Finds and displays counted and sorted workers")

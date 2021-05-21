@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for Penalty model
  * course.PenaltyDAOImpl
  *
  * @Autor: Kolja
@@ -30,6 +30,10 @@ public class PenaltyDAOImpl implements IPenaltyDAO{
     @Autowired
     PenaltyRepository penaltyRepository;
 
+    /**
+     * Create new Penalty method with auto-generated id and created_at
+     */
+
     @Override
     public Penalty create(Penalty penalty) {
 
@@ -43,6 +47,10 @@ public class PenaltyDAOImpl implements IPenaltyDAO{
         penaltyRepository.save(penalty);
         return penalty;
     }
+
+    /**
+     * Update Genre method with auto-generated modified_at
+     */
 
     @Override
     public Penalty update(Penalty penalty) {

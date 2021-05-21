@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Stillage model
  * course.StillageUIController
  *
  * @Autor: Kolja
@@ -37,6 +37,10 @@ public class StillageUIController {
     @Autowired
     StillageRepository stillageRepository;
 
+    /**
+     * Method to display all data from Stillage model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -48,6 +52,10 @@ public class StillageUIController {
 
         return "stillage/stillage-page";
     }
+
+    /**
+     * Method to delete data with specified id from Stillage model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -63,6 +71,10 @@ public class StillageUIController {
     @Autowired
     StillageServiceImpl service;
 
+    /**
+     * Method to display form where all creation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
@@ -77,6 +89,10 @@ public class StillageUIController {
 
         return "stillage/stillage-create";
     }
+
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Stillage model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
@@ -94,6 +110,10 @@ public class StillageUIController {
         return "redirect:/ui/stillage/get/all";
     }
 
+    /**
+     * Method to display form where all updation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
@@ -110,6 +130,10 @@ public class StillageUIController {
 
         return "stillage/stillage-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Stillage model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

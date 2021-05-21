@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for PenaltySystem model
  * course.PenaltySystemDAOImpl
  *
  * @Autor: Kolja
@@ -29,6 +29,11 @@ public class PenaltySystemDAOImpl implements IPenaltySystemDAO{
     @Autowired
     PenaltySystemRepository penaltySystemRepository;
 
+
+    /**
+     * Create new Damage method with auto-generated id and created_at
+     */
+
     @Override
     public PenaltySystem create(PenaltySystem penaltySystem) {
 
@@ -42,6 +47,10 @@ public class PenaltySystemDAOImpl implements IPenaltySystemDAO{
         penaltySystemRepository.save(penaltySystem);
         return penaltySystem;
     }
+
+    /**
+     * Update Damage method with auto-generated modified_at
+     */
 
     @Override
     public PenaltySystem update(PenaltySystem penaltySystem) {

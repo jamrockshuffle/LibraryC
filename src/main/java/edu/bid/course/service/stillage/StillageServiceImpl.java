@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Stillage model DAO methods
  * course.StillageServiceImpl
  *
  * @Autor: Kolja

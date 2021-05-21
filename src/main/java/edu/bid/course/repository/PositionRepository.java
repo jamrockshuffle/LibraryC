@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * This is an interface representation of Position collection in MongoDB
  * course.PositionRepository
  *
  * @Autor: Kolja

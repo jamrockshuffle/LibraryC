@@ -12,6 +12,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+/**
+ * Username and Password information for login
+ * course.BasicConfiguration
+ *
+ * @Autor: Kolja
+ * @Date: 05.05.2021
+ * @Version: BasicConfiguration: 1.0
+ */
+
 @Configuration
 @EnableWebSecurity
 public class BasicConfiguration extends WebSecurityConfigurerAdapter {

@@ -6,17 +6,17 @@ import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Swagger User Interface fpr API methods
+ * course.SwaggerConfiguration
+ *
+ * @Autor: Kolja
+ * @Date: 05.05.2021
+ * @Version: SwaggerConfiguration: 1.0
+ */
+
 @Configuration
 public class SwaggerConfiguration {
-
-    /**
-     * Created by IntelliJ IDEA.
-     * course.SwaggerConfiguration
-     *
-     * @Autor: Kolja
-     * @Date: 05.05.2021
-     * @Version: SwaggerConfiguration: 1.0
-     */
 
     @Bean
     public OpenAPI authorOpenAPI(){

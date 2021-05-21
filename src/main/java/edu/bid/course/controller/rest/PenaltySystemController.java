@@ -19,7 +19,7 @@ import java.util.Map;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for PenaltySystem model
  * course.PenaltySystemController
  *
  * @Autor: Kolja
@@ -39,6 +39,10 @@ public class PenaltySystemController {
     @Autowired
     PenaltySystemRepository penaltySystemRepository;
 
+    /**
+     * Method to display all (raw) data from PenaltySystem model
+     */
+
     @Operation(summary = " Get all Damages",
             description = " Finds and displays all Damages")
     @RequestMapping("/get/all")
@@ -49,6 +53,10 @@ public class PenaltySystemController {
         return penaltySystemRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from PenaltySystem model with specified id
+     */
 
     @Operation(summary = " Get one Damage",
             description = " Finds and displays Damage with specified id")
@@ -62,6 +70,10 @@ public class PenaltySystemController {
 
         return penaltySystemRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from PenaltySystem model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Damage deletion",
@@ -79,6 +91,10 @@ public class PenaltySystemController {
         return penaltySystemRepository.findAll();
     }
 
+    /**
+     * Method to create new data with auto-generated id in PenaltySystem model
+     */
+
     @Autowired
     PenaltySystemServiceImpl service;
 
@@ -93,6 +109,10 @@ public class PenaltySystemController {
         return service.create(penalty);
     }
 
+    /**
+     * Method to update data with specified id from PenaltySystem model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Damage updation",
             description = " Updates Damage with specified id")
@@ -103,6 +123,10 @@ public class PenaltySystemController {
 
         return service.update(penalty);
     }
+
+    /**
+     * Method to count and sort all data in PenaltySystem model based on Penalty model
+     */
 
     @Operation(summary = " Count all Damages based on Rented Books",
             description = " Finds and displays counted and sorted damages")

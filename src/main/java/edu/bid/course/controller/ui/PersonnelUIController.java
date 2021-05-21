@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Personnel model
  * course.PersonnelUIController
  *
  * @Autor: Kolja
@@ -42,6 +42,10 @@ public class PersonnelUIController {
     @Autowired
     PersonnelRepository personnelRepository;
 
+    /**
+     * Method to display all data from Personnel model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -53,6 +57,10 @@ public class PersonnelUIController {
 
         return "personnel/personnel-page";
     }
+
+    /**
+     * Method to delete data with specified id from Personnel model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -79,6 +87,10 @@ public class PersonnelUIController {
 
     @Autowired
     ShiftRepository shiftRepository;
+
+    /**
+     * Method to display form where all creation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
@@ -118,6 +130,10 @@ public class PersonnelUIController {
         return "personnel/personnel-create";
     }
 
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Personnel model and return get/all method
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public String create(Model model, @ModelAttribute("personnelForm") PersonnelForm personnelForm){
@@ -151,6 +167,10 @@ public class PersonnelUIController {
 
         return "redirect:/ui/personnel/get/all";
     }
+
+    /**
+     * Method to display form where all updation data will be stored
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
@@ -199,6 +219,10 @@ public class PersonnelUIController {
 
         return "personnel/personnel-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Personnel model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for DiscountSystem model
  * course.DiscountSystemController
  *
  * @Autor: Kolja
@@ -39,6 +39,10 @@ public class DiscountSystemController {
     @Autowired
     DiscountSystemRepository discountSystemRepository;
 
+    /**
+     * Method to display all (raw) data from DiscountSystem model
+     */
+
     @Operation(summary = " Get all Discount Categories",
             description = " Finds and displays all Discount Categories")
     @RequestMapping("/get/all")
@@ -49,6 +53,10 @@ public class DiscountSystemController {
         return discountSystemRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from DiscountSystem model with specified id
+     */
 
     @Operation(summary = " Get one Discount Category",
             description = " Finds and displays Discount Category with specified id")
@@ -62,6 +70,10 @@ public class DiscountSystemController {
 
         return discountSystemRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from DiscountSystem model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Discount Category deletion",
@@ -82,6 +94,10 @@ public class DiscountSystemController {
     @Autowired
     DiscountSystemServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in DiscountSystem model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Discount Category creation",
             description = " Adds new Discount Category to the DiscountSystem list. Id to be created is UUID type ")
@@ -93,6 +109,10 @@ public class DiscountSystemController {
         return service.create(discountSystem);
     }
 
+    /**
+     * Method to update data with specified id from DiscountSystem model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Book updation",
             description = " Updates Book with specified id")
@@ -103,6 +123,10 @@ public class DiscountSystemController {
 
         return service.update(discountSystem);
     }
+
+    /**
+     * Method to count and sort all data in DiscountSystem model based on Register model
+     */
 
     @Operation(summary = " Count all categories based on registered library members",
             description = " Finds and displays counted and sorted categories")

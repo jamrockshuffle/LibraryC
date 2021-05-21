@@ -7,16 +7,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold information about Authors
  * course.Author
  *
  * @Autor: Kolja
  * @Date: 05.05.2021
  * @Version: Author: 1.0
- */
-
-/**
- * This is a model to hold information about Authors
  */
 
 @Schema(description = " Author List? Entity")

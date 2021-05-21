@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Book model DAO methods
  * course.BookServiceImpl
  *
  * @Autor: Kolja

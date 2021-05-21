@@ -19,7 +19,7 @@ import java.util.Map;
 
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Book model
  * course.BookController
  *
  * @Autor: Kolja
@@ -38,6 +38,10 @@ public class BookController {
     @Autowired
     BookRepository bookRepository;
 
+    /**
+     * Method to display all (raw) data from Book model
+     */
+
     @Operation(summary = " Get all Books",
             description = " Finds and displays all Books")
     @RequestMapping("/get/all")
@@ -48,6 +52,10 @@ public class BookController {
         return bookRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Book model with specified id
+     */
 
     @Operation(summary = " Get one Book",
             description = " Finds and displays Book with specified id")
@@ -61,6 +69,10 @@ public class BookController {
 
         return bookRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Book model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Book deletion",
@@ -81,6 +93,10 @@ public class BookController {
     @Autowired
     BookServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Book model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Book creation",
             description = " Adds new book to the Book list. Id to be created is UUID type ")
@@ -92,6 +108,11 @@ public class BookController {
         return service.create(book);
     }
 
+    /**
+     * Method to update data with specified id from Book model
+     */
+
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Book updation",
             description = " Updates Book with specified id")
@@ -102,6 +123,10 @@ public class BookController {
 
         return service.update(book);
     }
+
+    /**
+     * Method to count and sort all data in Book model based on renting model
+     */
 
     @Operation(summary = " Count all books based on Rented Books",
             description = " Finds and displays counted and sorted books")

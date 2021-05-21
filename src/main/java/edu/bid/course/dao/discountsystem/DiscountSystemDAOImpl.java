@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 
 /**
- * Created by IntelliJ IDEA.
+ * Data access object (DAO) for DiscountSystem model
  * course.DiscountSystemDAOImpl
  *
  * @Autor: Kolja
@@ -30,6 +30,10 @@ public class DiscountSystemDAOImpl implements IDiscountSystemDAO{
     @Autowired
     DiscountSystemRepository discountSystemRepository;
 
+    /**
+     * Create new Discount Category method with auto-generated id and created_at
+     */
+
     @Override
     public DiscountSystem create(DiscountSystem discountSystem) {
 
@@ -43,6 +47,10 @@ public class DiscountSystemDAOImpl implements IDiscountSystemDAO{
         discountSystemRepository.save(discountSystem);
         return discountSystem;
     }
+
+    /**
+     * Update Discount Category method with auto-generated modified_at
+     */
 
     @Override
     public DiscountSystem update(DiscountSystem discountSystem) {

@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Stillage model
  * course.StillageController
  *
  * @Autor: Kolja
@@ -38,6 +38,10 @@ public class StillageController {
     @Autowired
     StillageRepository stillageRepository;
 
+    /**
+     * Method to display all (raw) data from Stillage model
+     */
+
     @Operation(summary = " Get all Stillages",
             description = " Finds and displays all Stillages")
     @RequestMapping("/get/all")
@@ -48,6 +52,10 @@ public class StillageController {
         return stillageRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Stillage model with specified id
+     */
 
     @Operation(summary = " Get one Stillage",
             description = " Finds and displays Stillage with specified id")
@@ -61,6 +69,10 @@ public class StillageController {
 
         return stillageRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Stillage model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage deletion",
@@ -81,6 +93,10 @@ public class StillageController {
     @Autowired
     StillageServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Stillage model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage creation",
             description = " Adds new Stillage to the Stillage list. Id to be created is UUID type ")
@@ -92,6 +108,11 @@ public class StillageController {
         return service.create(stillage);
     }
 
+    /**
+     * Method to update data with specified id from Stillage model
+     */
+
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Stillage updation",
             description = " Updates Stillage with specified id")
@@ -102,6 +123,10 @@ public class StillageController {
 
         return service.update(stillage);
     }
+
+    /**
+     * Method to count and sort all data in Stillage model based on Book model
+     */
 
     @Operation(summary = " Count all stillages based on books",
             description = " Finds and displays counted and sorted stillages")

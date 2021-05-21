@@ -1,7 +1,7 @@
 package edu.bid.course.form;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Genres
  * course.GenreForm
  *
  * @Autor: Kolja

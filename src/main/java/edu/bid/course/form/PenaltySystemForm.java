@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is a model to hold String information about Damages (for Penalties)
  * course.PenaltySystemForm
  *
  * @Autor: Kolja

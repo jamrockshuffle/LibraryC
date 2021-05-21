@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Genre model DAO methods
  * course.GenreServiceImpl
  *
  * @Autor: Kolja

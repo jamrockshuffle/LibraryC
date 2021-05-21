@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * UI methods for Publisher model
  * course.PublisherUIController
  *
  * @Autor: Kolja
@@ -36,6 +36,10 @@ public class PublisherUIController {
     @Autowired
     PublisherRepository publisherRepository;
 
+    /**
+     * Method to display all data from Publisher model and return it in .ftlh-file
+     */
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -47,6 +51,10 @@ public class PublisherUIController {
 
         return "publisher/publisher-page";
     }
+
+    /**
+     * Method to delete data with specified id from Publisher model and return previous method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/delete/{id}")
@@ -62,6 +70,10 @@ public class PublisherUIController {
     @Autowired
     PublisherServiceImpl service;
 
+    /**
+     * Method to display form where all creation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/create")
     public String create(Model model){
@@ -75,6 +87,10 @@ public class PublisherUIController {
 
         return "publisher/publisher-create";
     }
+
+    /**
+     * Method to create new data (based of data from previous method) with auto-generated id in Publisher model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
@@ -91,6 +107,10 @@ public class PublisherUIController {
         return "redirect:/ui/publisher/get/all";
     }
 
+    /**
+     * Method to display form where all updation data will be stored
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable String id){
@@ -106,6 +126,10 @@ public class PublisherUIController {
 
         return "publisher/publisher-update";
     }
+
+    /**
+     * Method to update new data (based of data from previous method) in Publisher model and return get/all method
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/update/{id}")

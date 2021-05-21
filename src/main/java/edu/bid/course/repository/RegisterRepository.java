@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
+ * This is an interface representation of Register collection in MongoDB
  * course.RegisterRepository
  *
  * @Autor: Kolja

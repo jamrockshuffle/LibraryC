@@ -19,7 +19,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Shift model DAO methods
  * course.ShiftServiceImpl
  *
  * @Autor: Kolja

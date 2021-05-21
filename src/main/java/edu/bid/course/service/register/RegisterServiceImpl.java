@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by IntelliJ IDEA.
+ * Service Implementation for Register model DAO methods
  * course.RegisterServiceImpl
  *
  * @Autor: Kolja

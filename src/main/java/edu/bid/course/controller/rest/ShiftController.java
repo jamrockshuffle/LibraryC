@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
+ * API methods for Shift model
  * course.ShiftController
  *
  * @Autor: Kolja
@@ -38,6 +38,10 @@ public class ShiftController {
     @Autowired
     ShiftRepository shiftRepository;
 
+    /**
+     * Method to display all (raw) data from Shift model
+     */
+
     @Operation(summary = " Get all Shifts",
             description = " Finds and displays all Shifts")
     @RequestMapping("/get/all")
@@ -48,6 +52,10 @@ public class ShiftController {
         return shiftRepository.findAll();
 
     }
+
+    /**
+     * Method to display raw data from Shift model with specified id
+     */
 
     @Operation(summary = " Get one Shift",
             description = " Finds and displays Shift with specified id")
@@ -61,6 +69,10 @@ public class ShiftController {
 
         return shiftRepository.findById(id).orElse(null);
     }
+
+    /**
+     * Method to delete data with specified id from Shift model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift deletion",
@@ -81,6 +93,10 @@ public class ShiftController {
     @Autowired
     ShiftServiceImpl service;
 
+    /**
+     * Method to create new data with auto-generated id in Shift model
+     */
+
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift creation",
             description = " Adds new Shift to the Shift list. Id to be created is UUID type ")
@@ -91,6 +107,10 @@ public class ShiftController {
 
         return service.create(shift);
     }
+
+    /**
+     * Method to update data with specified id from Shift model
+     */
 
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = " Shift updation",
@@ -103,6 +123,10 @@ public class ShiftController {
         return service.update(shift);
     }
 
+    /**
+     * Method to count and sort all data in Shift model based on Personnel model
+     */
+
     @Operation(summary = " Count all shifts based on library workers",
             description = " Finds and displays counted and sorted shifts")
     @RequestMapping("/get/sorted")
@@ -113,6 +137,10 @@ public class ShiftController {
         return service.sortShiftsByNumberOfWorkers();
     }
 
+    /**
+     * Method to find average among all values in each salary field in Personnel model by their shift field
+     */
+
     @Operation(summary = " Find and sort average salary of a shift based on library workers",
             description = " Finds and displays sorted average salary of a shift")
     @RequestMapping("/get/averagesalary")
@@ -122,6 +150,10 @@ public class ShiftController {
 
         return service.sortShiftsByAverageSalary();
     }
+
+    /**
+     * Method to count all values in each salary field in Personnel model by their shift field
+     */
 
     @Operation(summary = " Find and sort all salary of a shift based on library workers",
             description = " Finds and displays sorted all salary of a shift")
