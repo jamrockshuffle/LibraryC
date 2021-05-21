@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 
 /**
  * UI methods for Penalty model
- * course.PenaltyUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

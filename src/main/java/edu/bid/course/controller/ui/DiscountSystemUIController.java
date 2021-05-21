@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * UI methods for DiscountSystem model
- * course.DiscountSystemUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

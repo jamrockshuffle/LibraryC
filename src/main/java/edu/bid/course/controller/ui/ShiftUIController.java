@@ -20,7 +20,6 @@ import java.util.List;
 
 /**
  * UI methods for Shift model
- * course.ShiftUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

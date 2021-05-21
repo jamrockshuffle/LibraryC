@@ -17,7 +17,6 @@ import java.util.Map;
 
 /**
  * API methods for Author model
- * course.AuthorController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

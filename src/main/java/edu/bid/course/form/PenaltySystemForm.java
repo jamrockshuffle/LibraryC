@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 
 /**
  * This is a model to hold String information about Damages (for Penalties)
- * course.PenaltySystemForm
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

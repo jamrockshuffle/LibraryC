@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * API methods for Genre model
- * course.GenreController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

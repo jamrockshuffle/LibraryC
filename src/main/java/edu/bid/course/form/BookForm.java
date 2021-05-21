@@ -11,7 +11,6 @@ import java.time.Year;
 
 /**
  * This is a model to hold String information about Books
- * course.BookForm
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

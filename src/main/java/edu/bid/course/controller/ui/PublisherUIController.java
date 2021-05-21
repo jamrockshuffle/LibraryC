@@ -19,7 +19,6 @@ import java.util.List;
 
 /**
  * UI methods for Publisher model
- * course.PublisherUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

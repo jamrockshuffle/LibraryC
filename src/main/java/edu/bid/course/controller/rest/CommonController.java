@@ -19,7 +19,6 @@ import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
- * course.CommonController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -23,7 +23,6 @@ import java.util.Map;
 
 /**
  * API methods for Personnel model
- * course.PersonnelController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

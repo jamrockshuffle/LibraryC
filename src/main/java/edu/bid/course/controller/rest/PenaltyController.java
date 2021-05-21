@@ -19,7 +19,6 @@ import java.util.Map;
 
 /**
  * API methods for Penalty model
- * course.PenaltyController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

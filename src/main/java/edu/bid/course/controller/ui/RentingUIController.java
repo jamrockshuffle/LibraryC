@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
 
 /**
  * UI methods for Renting model
- * course.RentingUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

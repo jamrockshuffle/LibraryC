@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Position model DAO methods
- * course.PositionServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

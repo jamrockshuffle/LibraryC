@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Book model DAO methods
- * course.BookServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

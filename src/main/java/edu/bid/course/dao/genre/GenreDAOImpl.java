@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 
 /**
  * Data access object (DAO) for Genre model
- * course.GenreDAOImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Built Application
- * course.CourseApplication
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

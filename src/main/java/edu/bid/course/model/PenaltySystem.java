@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 
 /**
  * This is a model to hold information about Damages (for Penalties)
- * course.PenaltySystem
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

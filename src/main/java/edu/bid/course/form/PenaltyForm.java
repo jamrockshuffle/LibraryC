@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This is a model to hold String information about Penalties
- * course.PenaltyForm
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

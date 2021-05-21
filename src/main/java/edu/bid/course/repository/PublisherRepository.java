@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 /**
  * This is an interface representation of Publisher collection in MongoDB
- * course.PublisherRepository
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

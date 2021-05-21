@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * This is an interface representation of Register collection in MongoDB
- * course.RegisterRepository
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Renting model DAO methods
- * course.RentingServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

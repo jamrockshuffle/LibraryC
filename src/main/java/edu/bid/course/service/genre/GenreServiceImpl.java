@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Genre model DAO methods
- * course.GenreServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Register model DAO methods
- * course.RegisterServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

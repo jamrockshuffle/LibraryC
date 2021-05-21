@@ -14,7 +14,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
  * Username and Password information for login
- * course.BasicConfiguration
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Personnel model DAO methods
- * course.PersonnelServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -20,7 +20,6 @@ import java.util.Map;
 
 /**
  * API methods for Shift model
- * course.ShiftController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

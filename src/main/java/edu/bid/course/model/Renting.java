@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 
 /**
  * This is a model to hold information about Rented Books
- * course.Renting
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

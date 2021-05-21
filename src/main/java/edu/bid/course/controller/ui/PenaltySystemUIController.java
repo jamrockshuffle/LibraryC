@@ -22,7 +22,6 @@ import java.util.List;
 
 /**
  * UI methods for PenaltySystem model
- * course.PenaltySystemUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

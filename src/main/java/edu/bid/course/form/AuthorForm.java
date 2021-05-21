@@ -3,7 +3,6 @@ package edu.bid.course.form;
 
 /**
  * This is a model to hold String information about Authors
- * course.AuthorForm
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -20,7 +20,6 @@ import java.util.List;
 
 /**
  * UI methods for Author model
- * course.AuthorUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

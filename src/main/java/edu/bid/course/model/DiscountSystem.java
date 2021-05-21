@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 
 /**
  * This is a model to hold information about Discount Categories
- * course.DiscountSystem
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

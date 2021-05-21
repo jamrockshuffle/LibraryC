@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for PenaltySystem model DAO methods
- * course.PenaltySystemServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

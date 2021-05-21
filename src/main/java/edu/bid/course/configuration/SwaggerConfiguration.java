@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Swagger User Interface fpr API methods
- * course.SwaggerConfiguration
+ * Swagger User Interface for API methods
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

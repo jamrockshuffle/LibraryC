@@ -20,7 +20,6 @@ import java.util.Map;
 
 /**
  * API methods for Register model
- * course.RegisterController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

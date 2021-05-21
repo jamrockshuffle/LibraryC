@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for DiscountSystem model DAO methods
- * course.DiscountSystemServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

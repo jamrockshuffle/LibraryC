@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 /**
  * Data access object (DAO) for Renting model
- * course.RentingDAOImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

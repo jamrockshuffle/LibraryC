@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 
 /**
  * This is a model to hold information about Genres
- * course.Genre
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

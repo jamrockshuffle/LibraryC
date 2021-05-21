@@ -2,7 +2,6 @@ package edu.bid.course.form;
 
 /**
  * This is a model to hold String information about Worker Shifts
- * course.ShiftForm
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

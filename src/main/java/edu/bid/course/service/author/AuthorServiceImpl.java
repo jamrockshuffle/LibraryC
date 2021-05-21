@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Author model DAO methods
- * course.AuthorServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

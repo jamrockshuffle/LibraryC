@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 /**
  * This is an interface representation of Shift collection in MongoDB
- * course.ShiftRepository
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

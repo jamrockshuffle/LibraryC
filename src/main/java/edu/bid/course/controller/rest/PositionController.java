@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * API methods for Position model
- * course.PositionController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

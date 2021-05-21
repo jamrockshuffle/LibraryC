@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 /**
  * Data access object (DAO) for Stillage model
- * course.StillageDAOImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

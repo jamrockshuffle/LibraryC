@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Stillage model DAO methods
- * course.StillageServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

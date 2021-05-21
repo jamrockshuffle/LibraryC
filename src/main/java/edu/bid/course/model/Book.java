@@ -10,7 +10,6 @@ import java.time.Year;
 
 /**
  * This is a model to hold information about Books
- * course.Book
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

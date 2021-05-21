@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Shift model DAO methods
- * course.ShiftServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

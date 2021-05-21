@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * UI methods for Genre model
- * course.GenreUIController
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

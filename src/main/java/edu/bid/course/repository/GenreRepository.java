@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 /**
  * This is an interface representation of Genre collection in MongoDB
- * course.GenreRepository
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

@@ -7,7 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * Password configuration
- * course.PasswordConfig
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

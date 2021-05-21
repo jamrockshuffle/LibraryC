@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 /**
  * Service Implementation for Publisher model DAO methods
- * course.PublisherServiceImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021

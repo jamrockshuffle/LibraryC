@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 /**
  * Data access object (DAO) for Personnel model
- * course.PersonnelDAOImpl
  *
  * @Autor: Kolja
  * @Date: 05.05.2021
