@@ -36,6 +36,9 @@ public class AuthorController {
 
     /**
      * Method to display all (raw) data from Author model
+     *
+     *
+     * @return all authors
      */
 
     @Operation(summary = " Get all Authors",
