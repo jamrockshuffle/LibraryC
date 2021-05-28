@@ -8,14 +8,22 @@ import edu.bid.course.service.book.BookServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.*;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.newAggregation;
 
 
 /**
@@ -36,6 +44,9 @@ public class BookController {
 
     @Autowired
     BookRepository bookRepository;
+
+    @Autowired
+    MongoTemplate mongoTemplate;
 
     /**
      * Method to display all (raw) data from Book model
@@ -136,4 +147,20 @@ public class BookController {
 
         return service.sortBooksByNumberORentedOnes();
     }
+
+    /*@GetMapping("/1")
+    public List<Document> prodAggr1 () {
+
+        GroupOperation findAllMax = group("yearOfPublishing")
+                .sum("collateralCost").as("total")
+                .max("collateralCost").as("max")
+                .avg("collateralCost").as("average");
+
+        SortOperation sortByAsc = sort(Sort.by(Sort.Direction.ASC, "_id"));
+
+        Aggregation aggregation = newAggregation(findAllMax, sortByAsc);
+        AggregationResults<Document> result = mongoTemplate.aggregate(aggregation, "Book", Document.class);
+
+        return result.getMappedResults();
+    }*/
 }
