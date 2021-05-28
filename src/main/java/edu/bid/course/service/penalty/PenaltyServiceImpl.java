@@ -2,17 +2,16 @@ package edu.bid.course.service.penalty;
 
 import edu.bid.course.dao.genre.GenreDAOImpl;
 import edu.bid.course.dao.penalty.PenaltyDAOImpl;
-import edu.bid.course.model.Genre;
-import edu.bid.course.model.Penalty;
-import edu.bid.course.model.PenaltySystem;
-import edu.bid.course.model.Register;
+import edu.bid.course.model.*;
 import edu.bid.course.repository.PenaltyRepository;
+import edu.bid.course.repository.RentingRepository;
 import edu.bid.course.service.genre.GenreServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -36,6 +35,9 @@ public class PenaltyServiceImpl implements IPenaltyService{
 
     @Autowired
     PenaltyRepository penaltyRepository;
+
+    @Autowired
+    RentingRepository rentingRepository;
 
     @Override
     public Penalty create(Penalty penalty) {
@@ -69,6 +71,50 @@ public class PenaltyServiceImpl implements IPenaltyService{
                 .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
 
         LOGGER.info(" Count and sort all rented books based on registered Damages query has been executed. ");
+
+        return sorted;
+    }
+
+    public Map<String, BigDecimal> getTotalSumOfPenaltiesPerReader(){
+
+
+        Map<String, BigDecimal> sorted = new LinkedHashMap<>();
+
+        Map<String, BigDecimal> map = rentingRepository.findAll().stream()
+                .collect(
+                        Collectors.groupingBy(r -> r.getReader().getLastName(),
+                                Collectors.reducing(BigDecimal.ZERO, Renting::getPenaltySum, BigDecimal::add)
+
+                        )
+                );
+
+        map.entrySet().stream()
+                .sorted(Map.Entry.<String, BigDecimal>comparingByValue().reversed())
+                .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
+
+        LOGGER.info(" Count and sort all penalties per reader (Service) query has been executed. ");
+
+        return sorted;
+    }
+
+    public Map<String, BigDecimal> getTotalSumOfPenaltiesPerBook(){
+
+
+        Map<String, BigDecimal> sorted = new LinkedHashMap<>();
+
+        Map<String, BigDecimal> map = rentingRepository.findAll().stream()
+                .collect(
+                        Collectors.groupingBy(r -> r.getBook().getName(),
+                                Collectors.reducing(BigDecimal.ZERO, Renting::getPenaltySum, BigDecimal::add)
+
+                        )
+                );
+
+        map.entrySet().stream()
+                .sorted(Map.Entry.<String, BigDecimal>comparingByValue().reversed())
+                .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
+
+        LOGGER.info(" Count and sort all penalties per book (Service) query has been executed. ");
 
         return sorted;
     }

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -135,4 +136,33 @@ public class PenaltyController {
 
         return service.sortRentedBooksByNumberOfDamages();
     }
+
+    /**
+     * Method to count and sort PenaltySum field in Renting model based on Penalty model (Reader field)
+     */
+
+    @Operation(summary = " Count all Penalties per Reader",
+            description = " Finds and displays counted and sorted penalties per reader")
+    @RequestMapping("/get/allpenaltiesreader")
+    public Map<String, BigDecimal> getTotalSumOfPenaltiesPerReader(){
+
+        LOGGER.info(" Count and sort all penalties per reader (API) query has been executed. ");
+
+        return service.getTotalSumOfPenaltiesPerReader();
+    }
+
+    /**
+     * Method to count and sort PenaltySum field in Renting model based on Penalty model (Book field)
+     */
+
+    @Operation(summary = " Count all Penalties per Book",
+            description = " Finds and displays counted and sorted penalties per book")
+    @RequestMapping("/get/allpenaltiesbook")
+    public Map<String, BigDecimal> getTotalSumOfPenaltiesPerBook(){
+
+        LOGGER.info(" Count and sort all penalties per book (API) query has been executed. ");
+
+        return service.getTotalSumOfPenaltiesPerBook();
+    }
+
 }

@@ -147,6 +147,24 @@
                 </td>
             </tr>
 
+            <tr>
+                <td>Загальна сума всіх штрафів на читача</td>
+                <td>
+                    <a href="/api/penalty/get/allpenaltiesreader">
+                        <button class="btn btn-light btn-sm">Перейти</button>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Загальна сума всіх штрафів на книгу</td>
+                <td>
+                    <a href="/api/penalty/get/allpenaltiesbook">
+                        <button class="btn btn-light btn-sm">Перейти</button>
+                    </a>
+                </td>
+            </tr>
+
         </table>
     </div>
 
