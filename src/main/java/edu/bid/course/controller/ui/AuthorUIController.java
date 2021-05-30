@@ -94,7 +94,7 @@ public class AuthorUIController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
-    public String create(Model model, @ModelAttribute("positionForm") AuthorForm authorForm){
+    public String create(Model model, @ModelAttribute("authorForm") AuthorForm authorForm){
 
         Author author = new Author();
         author.setName(authorForm.getName());
