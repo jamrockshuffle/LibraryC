@@ -1,68 +1,679 @@
-2021-05-29 22:10:45,642 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 9720 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
-2021-05-29 22:10:45,660 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
-2021-05-29 22:10:47,105 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2021-05-29 22:10:47,240 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 129 ms. Found 13 MongoDB repository interfaces.
-2021-05-29 22:10:47,631 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
-2021-05-29 22:10:47,649 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
-2021-05-29 22:10:47,650 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
-2021-05-29 22:10:47,651 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-05-29 22:10:47,763 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
-2021-05-29 22:10:47,764 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2029 ms
-2021-05-29 22:10:48,033 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
-2021-05-29 22:10:48,086 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
-2021-05-29 22:10:48,112 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
-2021-05-29 22:10:48,113 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:312841}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:312129}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:384494}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:384494}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:312841}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,758 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:312129}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,760 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=285997100, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sat May 29 22:10:48 EEST 2021, lastUpdateTimeNanos=309206273676300}
-2021-05-29 22:10:48,759 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=286817300, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sat May 29 22:10:48 EEST 2021, lastUpdateTimeNanos=309206273801000}
-2021-05-29 22:10:48,759 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=287327900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sat May 29 22:10:48 EEST 2021, lastUpdateTimeNanos=309206273390400}
-2021-05-29 22:10:48,762 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,762 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:10:48,763 INFO o.m.d.cluster [cluster-ClusterId{value='60b291b832a0e219e3a35caa', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:10:49,148 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45d7495e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2aa6bbad, org.springframework.security.web.header.HeaderWriterFilter@5f409872, org.springframework.security.web.authentication.logout.LogoutFilter@3386c206, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a826ff8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f867b0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d16209e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30517a57, org.springframework.security.web.session.SessionManagementFilter@3356ff58, org.springframework.security.web.access.ExceptionTranslationFilter@46ab4efc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3303e89e]
-2021-05-29 22:10:49,209 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-29 22:10:49,330 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
-2021-05-29 22:10:49,938 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
-2021-05-29 22:10:49,962 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
-2021-05-29 22:10:49,973 INFO e.b.c.CourseApplication [main] Started CourseApplication in 5.054 seconds (JVM running for 6.755)
-2021-05-29 22:11:41,612 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-05-29 22:11:41,612 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
-2021-05-29 22:11:41,613 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 1 ms
-2021-05-29 22:11:44,869 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Get all Authors (UI) request has been called. 
-2021-05-29 22:11:45,224 INFO o.m.d.connection [http-nio-1010-exec-2] Opened connection [connectionId{localValue:7, serverValue:384566}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
-2021-05-29 22:11:48,710 INFO e.b.c.c.u.ShiftUIController [http-nio-1010-exec-5]  Get all Shifts (UI) request has been called. 
-2021-05-29 22:11:52,483 INFO e.b.c.c.u.ShiftUIController [http-nio-1010-exec-7]  Create Shift Form (UI) has been called. 
-2021-05-29 22:11:54,077 INFO e.b.c.c.u.ShiftUIController [http-nio-1010-exec-6]  Get all Shifts (UI) request has been called. 
-2021-05-29 22:11:56,483 INFO e.b.c.c.u.PublisherUIController [http-nio-1010-exec-10]  Get all Publishers (UI) request has been called. 
-2021-05-29 22:12:21,079 INFO o.s.a.AbstractOpenApiResource [http-nio-1010-exec-9] Init duration for springdoc-openapi is: 1601 ms
-2021-05-29 22:13:29,272 INFO e.b.c.c.r.GenreController [http-nio-1010-exec-3]  Get Genre by id (API) with id 2 request has been called. 
-2021-05-29 22:13:44,050 INFO e.b.c.c.r.GenreController [http-nio-1010-exec-5]  Get all Genres (API) request has been called. 
-2021-05-29 22:14:19,780 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-8]  Get all Genres (UI) request has been called. 
-2021-05-29 22:14:38,759 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
- at [Source: (PushbackInputStream); line: 4, column: 2]]
-2021-05-29 22:14:45,553 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-10]  Get all Genres (UI) request has been called. 
-2021-05-29 22:14:50,718 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-9] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
- at [Source: (PushbackInputStream); line: 4, column: 2]]
-2021-05-29 22:14:53,088 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-1]  Get all Genres (UI) request has been called. 
-2021-05-29 22:15:19,854 INFO e.b.c.c.r.GenreController [http-nio-1010-exec-2]  Create new Genre (API) request has been called. 
-2021-05-29 22:15:19,861 INFO e.b.c.s.g.GenreServiceImpl [http-nio-1010-exec-2]  Create new Genre (Service) request has been called. 
-2021-05-29 22:15:19,865 INFO e.b.c.d.g.GenreDAOImpl [http-nio-1010-exec-2]  Create new Genre (DAO) request has been called. 
-2021-05-29 22:15:26,682 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-4]  Get all Genres (UI) request has been called. 
-2021-05-29 22:15:30,400 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-3]  Update Genre Form (UI) has been called. 
-2021-05-29 22:15:32,305 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-5]  Get all Genres (UI) request has been called. 
-2021-05-29 22:15:33,275 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-7]  Delete Genre (UI) by id with id 7 request has been called. 
-2021-05-29 22:15:33,348 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-8]  Get all Genres (UI) request has been called. 
-2021-05-29 22:15:39,890 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Get all Authors (UI) request has been called. 
-2021-05-29 22:15:41,735 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Get all Authors (UI) request has been called. 
-2021-05-29 22:15:43,274 INFO e.b.c.c.u.GenreUIController [http-nio-1010-exec-2]  Get all Genres (UI) request has been called. 
-2021-05-29 22:15:46,251 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-3]  Get all Books (UI) request has been called. 
-2021-05-29 22:15:48,282 INFO e.b.c.c.r.GenreController [http-nio-1010-exec-5]  Count and sort all genres based on Books (API) query has been executed. 
-2021-05-29 22:15:48,345 INFO e.b.c.s.g.GenreServiceImpl [http-nio-1010-exec-5]  Count and sort all genres based on Books (Service) query has been executed. 
-2021-05-29 22:16:17,332 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-8]  Get all Authors (API) request has been called. 
-2021-05-29 22:16:23,984 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-6]  Get Author by id (API) with id 2 request has been called. 
-2021-05-29 22:16:28,917 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-10]  Get Author by id (API) with id 3 request has been called. 
+2021-05-30 09:49:13,852 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 12572 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 09:49:13,886 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 09:49:15,901 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 09:49:16,251 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 344 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 09:49:16,918 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 09:49:16,944 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 09:49:16,946 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 09:49:16,948 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 09:49:17,114 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 09:49:17,115 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3155 ms
+2021-05-30 09:49:17,435 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 09:49:17,504 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 09:49:17,534 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 09:49:17,537 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:318095}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:318257}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:318997}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:391732}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:391732}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,194 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:319156}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,203 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=317754900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 09:49:19 EEST 2021, lastUpdateTimeNanos=351117549744800}
+2021-05-30 09:49:18,205 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=296377300, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 09:49:19 EEST 2021, lastUpdateTimeNanos=351117549847700}
+2021-05-30 09:49:18,207 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=298204500, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 09:49:19 EEST 2021, lastUpdateTimeNanos=351117549504300}
+2021-05-30 09:49:18,216 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,218 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,219 INFO o.m.d.cluster [cluster-ClusterId{value='60b3356daae4e227051b436e', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:18,773 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30517a57, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b2ef50e, org.springframework.security.web.header.HeaderWriterFilter@547aaa32, org.springframework.security.web.authentication.logout.LogoutFilter@1322b575, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71f0806b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b5ad306, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75527e36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dde5f38, org.springframework.security.web.session.SessionManagementFilter@b55f5b7, org.springframework.security.web.access.ExceptionTranslationFilter@2ff498b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cec590c]
+2021-05-30 09:49:18,858 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 09:49:19,023 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 09:49:19,733 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 09:49:19,755 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 09:49:19,767 INFO e.b.c.CourseApplication [main] Started CourseApplication in 6.67 seconds (JVM running for 8.897)
+2021-05-30 09:49:19,868 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 09:49:19,868 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 09:49:19,869 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 1 ms
+2021-05-30 09:49:39,921 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-6]  Get all Books (UI) request has been called. 
+2021-05-30 09:49:40,294 INFO o.m.d.connection [http-nio-1010-exec-6] Opened connection [connectionId{localValue:7, serverValue:391728}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 09:49:48,086 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-8]  Get all Books (UI) request has been called. 
+2021-05-30 10:06:35,754 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-9]  Get all Library Members (UI) request has been called. 
+2021-05-30 10:07:14,098 INFO e.b.c.c.u.PublisherUIController [http-nio-1010-exec-1]  Get all Publishers (UI) request has been called. 
+2021-05-30 10:07:15,508 INFO e.b.c.c.u.PublisherUIController [http-nio-1010-exec-2]  Update Publisher Form (UI) has been called. 
+2021-05-30 10:07:17,527 INFO e.b.c.c.u.PublisherUIController [http-nio-1010-exec-3]  Get all Publishers (UI) request has been called. 
+2021-05-30 10:07:19,809 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-5]  Get all Books (UI) request has been called. 
+2021-05-30 10:07:27,890 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Get all Authors (UI) request has been called. 
+2021-05-30 10:07:37,827 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Create Author Form (UI) has been called. 
+2021-05-30 10:07:44,036 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-10]  Create new Author (Service) request has been called. 
+2021-05-30 10:07:44,039 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-10]  Create new Author (DAO) request has been called. 
+2021-05-30 10:07:44,192 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Create Author (UI) request has been called. A new Author has been created. 
+2021-05-30 10:07:44,203 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Get all Authors (UI) request has been called. 
+2021-05-30 10:07:52,991 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Update Author Form (UI) with id 10 has been called. 
+2021-05-30 10:07:56,066 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-3]  Update existing Author (Service) request has been called. 
+2021-05-30 10:07:56,067 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-3]  Update existing Author (DAO) request has been called. 
+2021-05-30 10:07:56,170 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Update Author (UI) by id with id 10 request has been called. 
+2021-05-30 10:07:56,178 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Get all Authors (UI) request has been called. 
+2021-05-30 10:08:01,570 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 10:08:01,639 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-6]  Get all Authors (UI) request has been called. 
+2021-05-30 10:08:05,857 INFO e.b.c.c.u.PositionUIController [http-nio-1010-exec-8]  Get all Positions (UI) request has been called. 
+2021-05-30 10:08:08,977 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-10]  Get all Books (UI) request has been called. 
+2021-05-30 10:08:10,264 INFO e.b.c.c.r.CommonController [http-nio-1010-exec-2]  Get Titulka request has been called. 
+2021-05-30 10:08:26,327 INFO e.b.c.c.r.CommonController [http-nio-1010-exec-4]  Get Titulka request has been called. 
+2021-05-30 10:13:10,352 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 11956 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 10:13:10,361 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 10:13:11,190 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 10:13:11,322 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 127 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 10:13:11,734 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 10:13:11,751 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 10:13:11,751 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 10:13:11,752 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 10:13:11,857 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 10:13:11,857 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1427 ms
+2021-05-30 10:13:12,073 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 10:13:12,157 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 10:13:12,189 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 10:13:12,190 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 10:13:12,744 INFO o.m.d.connection [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:319324}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,744 INFO o.m.d.connection [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:318444}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,745 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:319324}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,745 INFO o.m.d.connection [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:392106}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,745 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=272282900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 10:13:14 EEST 2021, lastUpdateTimeNanos=352552102156100}
+2021-05-30 10:13:12,745 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=280246800, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 10:13:14 EEST 2021, lastUpdateTimeNanos=352552101432200}
+2021-05-30 10:13:12,746 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=277744700, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 10:13:14 EEST 2021, lastUpdateTimeNanos=352552100654800}
+2021-05-30 10:13:12,746 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:392106}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,747 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:318444}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,747 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,747 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:12,747 INFO o.m.d.cluster [cluster-ClusterId{value='60b33b0867b39b64ba2ae1db', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:13,253 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11148dc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@4438b862, org.springframework.security.web.header.HeaderWriterFilter@7f8c3646, org.springframework.security.web.authentication.logout.LogoutFilter@21a6a494, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@308e87a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44fb6ebd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5103eea2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3be80ece, org.springframework.security.web.session.SessionManagementFilter@4522d793, org.springframework.security.web.access.ExceptionTranslationFilter@786a3477, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3db1ce78]
+2021-05-30 10:13:13,313 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 10:13:13,447 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 10:13:14,079 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 10:13:14,104 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 10:13:14,113 INFO e.b.c.CourseApplication [main] Started CourseApplication in 4.542 seconds (JVM running for 5.593)
+2021-05-30 10:13:16,952 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 10:13:16,953 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 10:13:16,954 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 1 ms
+2021-05-30 10:13:18,295 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Get all Authors (UI) request has been called. 
+2021-05-30 10:13:18,669 INFO o.m.d.connection [http-nio-1010-exec-2] Opened connection [connectionId{localValue:7, serverValue:392031}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 10:13:20,032 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Create Author Form (UI) has been called. 
+2021-05-30 10:13:23,169 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-4]  Create new Author (Service) request has been called. 
+2021-05-30 10:13:23,172 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-4]  Create new Author (DAO) request has been called. 
+2021-05-30 10:13:23,316 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Create Author (UI) request has been called. A new Author has been created. 
+2021-05-30 10:13:23,328 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Get all Authors (UI) request has been called. 
+2021-05-30 10:13:51,654 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-6]  Update Author Form (UI) with id 10 has been called. 
+2021-05-30 10:13:52,169 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-7]  Update existing Author (Service) request has been called. 
+2021-05-30 10:13:52,170 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-7]  Update existing Author (DAO) request has been called. 
+2021-05-30 10:13:52,280 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Update Author (UI) by id with id 10 request has been called. 
+2021-05-30 10:13:52,285 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-8]  Get all Authors (UI) request has been called. 
+2021-05-30 10:14:04,655 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 10:14:04,731 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Get all Authors (UI) request has been called. 
+2021-05-30 11:06:29,435 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 4676 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 11:06:29,444 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 11:06:30,282 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 11:06:30,401 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 115 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 11:06:30,784 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 11:06:30,800 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 11:06:30,800 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 11:06:30,801 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 11:06:30,915 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 11:06:30,915 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1425 ms
+2021-05-30 11:06:31,140 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 11:06:31,179 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:06:31,204 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:06:31,205 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:319808}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:319808}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:318902}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:392616}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:392642}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.connection [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:318902}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,746 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=258643400, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 11:06:33 EEST 2021, lastUpdateTimeNanos=355751101284500}
+2021-05-30 11:06:31,747 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=238403000, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 11:06:33 EEST 2021, lastUpdateTimeNanos=355751101704800}
+2021-05-30 11:06:31,747 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=258154600, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 11:06:33 EEST 2021, lastUpdateTimeNanos=355751101284600}
+2021-05-30 11:06:31,748 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,748 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:31,748 INFO o.m.d.cluster [cluster-ClusterId{value='60b34787e883732eabe3c947', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:32,275 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11148dc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@4438b862, org.springframework.security.web.header.HeaderWriterFilter@7f8c3646, org.springframework.security.web.authentication.logout.LogoutFilter@21a6a494, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@308e87a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44fb6ebd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5103eea2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3be80ece, org.springframework.security.web.session.SessionManagementFilter@4522d793, org.springframework.security.web.access.ExceptionTranslationFilter@786a3477, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3db1ce78]
+2021-05-30 11:06:32,345 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 11:06:32,469 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 11:06:33,093 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 11:06:33,114 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 11:06:33,124 INFO e.b.c.CourseApplication [main] Started CourseApplication in 4.355 seconds (JVM running for 5.696)
+2021-05-30 11:06:42,717 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 11:06:42,718 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 11:06:42,720 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 2 ms
+2021-05-30 11:06:43,007 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Get all Authors (UI) request has been called. 
+2021-05-30 11:06:43,358 INFO o.m.d.connection [http-nio-1010-exec-1] Opened connection [connectionId{localValue:7, serverValue:392645}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:06:45,410 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Get all Authors (UI) request has been called. 
+2021-05-30 11:06:50,481 INFO e.b.c.c.u.PositionUIController [http-nio-1010-exec-4]  Get all Positions (UI) request has been called. 
+2021-05-30 11:06:54,528 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-6]  Get all Authors (UI) request has been called. 
+2021-05-30 11:06:55,355 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Create Author Form (UI) has been called. 
+2021-05-30 11:06:57,122 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-8]  Create new Author (Service) request has been called. 
+2021-05-30 11:06:57,124 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-8]  Create new Author (DAO) request has been called. 
+2021-05-30 11:06:57,300 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-8]  Create Author (UI) request has been called. A new Author has been created. 
+2021-05-30 11:06:57,312 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Get all Authors (UI) request has been called. 
+2021-05-30 11:06:58,734 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Update Author Form (UI) with id 10 has been called. 
+2021-05-30 11:06:59,235 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-1]  Update existing Author (Service) request has been called. 
+2021-05-30 11:06:59,236 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-1]  Update existing Author (DAO) request has been called. 
+2021-05-30 11:06:59,344 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Update Author (UI) by id with id 10 request has been called. 
+2021-05-30 11:06:59,354 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Get all Authors (UI) request has been called. 
+2021-05-30 11:07:03,721 INFO e.b.c.c.u.PositionUIController [http-nio-1010-exec-4]  Get all Positions (UI) request has been called. 
+2021-05-30 11:07:06,307 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-6]  Get all Books (UI) request has been called. 
+2021-05-30 11:07:09,080 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-8]  Get all Authors (UI) request has been called. 
+2021-05-30 11:07:10,539 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 11:07:10,609 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:10,419 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 7368 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 11:43:10,427 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 11:43:11,289 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 11:43:11,409 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 116 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 11:43:11,796 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 11:43:11,810 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 11:43:11,811 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 11:43:11,812 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 11:43:11,924 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 11:43:11,924 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1449 ms
+2021-05-30 11:43:12,122 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 11:43:12,158 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:43:12,187 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:43:12,188 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:319406}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:393070}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:393070}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:320285}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:319406}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,765 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=286102300, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 11:43:14 EEST 2021, lastUpdateTimeNanos=357952121086400}
+2021-05-30 11:43:12,764 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:320285}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,765 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=286616600, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 11:43:14 EEST 2021, lastUpdateTimeNanos=357952120939300}
+2021-05-30 11:43:12,765 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=275955900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 11:43:14 EEST 2021, lastUpdateTimeNanos=357952120690600}
+2021-05-30 11:43:12,766 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,767 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:12,767 INFO o.m.d.cluster [cluster-ClusterId{value='60b350209f35d123ae799c79', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:13,256 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69e2fe3b, org.springframework.security.web.context.SecurityContextPersistenceFilter@71e2c6d8, org.springframework.security.web.header.HeaderWriterFilter@6136e1fc, org.springframework.security.web.authentication.logout.LogoutFilter@7afbf2a0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@bd4ee01, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@376b5cb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21a6a494, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27afbf14, org.springframework.security.web.session.SessionManagementFilter@46b6701e, org.springframework.security.web.access.ExceptionTranslationFilter@44fb6ebd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11148dc2]
+2021-05-30 11:43:13,314 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 11:43:13,421 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 11:43:13,981 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 11:43:14,005 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 11:43:14,015 INFO e.b.c.CourseApplication [main] Started CourseApplication in 4.341 seconds (JVM running for 5.548)
+2021-05-30 11:43:43,770 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 11:43:43,771 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 11:43:43,772 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 1 ms
+2021-05-30 11:43:44,062 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:44,415 INFO o.m.d.connection [http-nio-1010-exec-1] Opened connection [connectionId{localValue:7, serverValue:392958}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 11:43:45,756 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Create Author Form (UI) has been called. 
+2021-05-30 11:43:47,894 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-3]  Create new Author (Service) request has been called. 
+2021-05-30 11:43:47,897 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-3]  Create new Author (DAO) request has been called. 
+2021-05-30 11:43:48,053 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Create Author (UI) request has been called. A new Author has been created. 
+2021-05-30 11:43:48,061 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:49,107 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Create Author Form (UI) has been called. 
+2021-05-30 11:43:51,507 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-6]  Create new Author (Service) request has been called. 
+2021-05-30 11:43:51,508 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-6]  Create new Author (DAO) request has been called. 
+2021-05-30 11:43:51,623 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-6]  Create Author (UI) request has been called. A new Author has been created. 
+2021-05-30 11:43:51,629 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:52,704 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-8]  Update Author Form (UI) with id 11 has been called. 
+2021-05-30 11:43:53,261 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-9]  Update existing Author (Service) request has been called. 
+2021-05-30 11:43:53,261 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-9]  Update existing Author (DAO) request has been called. 
+2021-05-30 11:43:53,371 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Update Author (UI) by id with id 11 request has been called. 
+2021-05-30 11:43:53,381 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-10]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:54,445 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Update Author Form (UI) with id 10 has been called. 
+2021-05-30 11:43:55,669 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-2]  Update existing Author (Service) request has been called. 
+2021-05-30 11:43:55,669 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-2]  Update existing Author (DAO) request has been called. 
+2021-05-30 11:43:55,779 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Update Author (UI) by id with id 10 request has been called. 
+2021-05-30 11:43:55,785 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:56,723 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Delete Author (UI) by id with id 11 request has been called. 
+2021-05-30 11:43:56,791 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Get all Authors (UI) request has been called. 
+2021-05-30 11:43:57,130 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-6]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 11:43:57,196 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Get all Authors (UI) request has been called. 
+2021-05-30 12:11:07,769 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 9896 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 12:11:07,777 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 12:11:08,565 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 12:11:08,708 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 138 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 12:11:09,083 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 12:11:09,097 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 12:11:09,097 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 12:11:09,098 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 12:11:09,196 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 12:11:09,196 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1371 ms
+2021-05-30 12:11:09,419 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 12:11:09,455 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 12:11:09,479 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 12:11:09,480 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 12:11:10,018 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:320561}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,019 INFO o.m.d.connection [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:319652}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,019 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:393543}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,019 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=286311900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 12:11:11 EEST 2021, lastUpdateTimeNanos=359629376234800}
+2021-05-30 12:11:10,019 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:319590}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,020 INFO o.m.d.connection [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:393543}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,020 INFO o.m.d.connection [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:320561}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,020 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=282588700, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 12:11:11 EEST 2021, lastUpdateTimeNanos=359629375693200}
+2021-05-30 12:11:10,021 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=286598900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 12:11:11 EEST 2021, lastUpdateTimeNanos=359629376522500}
+2021-05-30 12:11:10,021 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,022 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,022 INFO o.m.d.cluster [cluster-ClusterId{value='60b356adc4fdd546401060c1', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:10,553 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@467ef400, org.springframework.security.web.context.SecurityContextPersistenceFilter@11abd6c, org.springframework.security.web.header.HeaderWriterFilter@7e77678c, org.springframework.security.web.authentication.logout.LogoutFilter@3356ff58, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22c8ee48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7608a838, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7534785a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13fe5bb7, org.springframework.security.web.session.SessionManagementFilter@78318ac2, org.springframework.security.web.access.ExceptionTranslationFilter@2565a7d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c72189f]
+2021-05-30 12:11:10,613 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 12:11:10,724 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 12:11:11,270 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 12:11:11,291 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 12:11:11,301 INFO e.b.c.CourseApplication [main] Started CourseApplication in 4.315 seconds (JVM running for 5.302)
+2021-05-30 12:11:35,329 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 12:11:35,329 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 12:11:35,330 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 1 ms
+2021-05-30 12:11:35,681 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-1]  Create new Author (API) request has been called. 
+2021-05-30 12:11:35,686 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-1]  Create new Author (Service) request has been called. 
+2021-05-30 12:11:35,689 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-1]  Create new Author (DAO) request has been called. 
+2021-05-30 12:11:36,042 INFO o.m.d.connection [http-nio-1010-exec-1] Opened connection [connectionId{localValue:7, serverValue:393582}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 12:11:41,921 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Get all Authors (UI) request has been called. 
+2021-05-30 12:11:43,908 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 12:11:43,982 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Get all Authors (UI) request has been called. 
+2021-05-30 12:12:18,184 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Get all Authors (UI) request has been called. 
+2021-05-30 12:12:20,066 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-7]  Get all Books (UI) request has been called. 
+2021-05-30 12:12:21,220 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-8]  Create Book Form (UI) has been called. 
+2021-05-30 12:12:36,464 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-9]  Get all Books (UI) request has been called. 
+2021-05-30 12:13:08,385 INFO e.b.c.c.u.ShiftUIController [http-nio-1010-exec-2]  Get all Shifts (UI) request has been called. 
+2021-05-30 12:13:10,777 INFO e.b.c.c.r.CommonController [http-nio-1010-exec-4]  Get Titulka request has been called. 
+2021-05-30 12:13:48,957 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-6]  Create new Author (API) request has been called. 
+2021-05-30 12:13:48,958 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-6]  Create new Author (Service) request has been called. 
+2021-05-30 12:13:48,959 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-6]  Create new Author (DAO) request has been called. 
+2021-05-30 12:13:50,630 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-7]  Get all Authors (UI) request has been called. 
+2021-05-30 12:13:50,932 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-8]  Get all Authors (UI) request has been called. 
+2021-05-30 12:14:08,190 INFO e.b.c.c.r.AuthorController [http-nio-1010-exec-10]  Update existing Author (API) request has been called. 
+2021-05-30 12:14:08,190 INFO e.b.c.s.a.AuthorServiceImpl [http-nio-1010-exec-10]  Update existing Author (Service) request has been called. 
+2021-05-30 12:14:08,190 INFO e.b.c.d.a.AuthorDAOImpl [http-nio-1010-exec-10]  Update existing Author (DAO) request has been called. 
+2021-05-30 12:14:11,864 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Get all Authors (UI) request has been called. 
+2021-05-30 12:14:16,597 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-2]  Update Author Form (UI) with id 10 has been called. 
+2021-05-30 12:14:17,756 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-3]  Get all Authors (UI) request has been called. 
+2021-05-30 12:14:20,086 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-4]  Delete Author (UI) by id with id 10 request has been called. 
+2021-05-30 12:14:20,147 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-5]  Get all Authors (UI) request has been called. 
+2021-05-30 12:14:57,896 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-7]  Get all Books (UI) request has been called. 
+2021-05-30 12:15:00,358 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-9]  Get all Authors (UI) request has been called. 
+2021-05-30 12:15:03,096 INFO e.b.c.c.u.PublisherUIController [http-nio-1010-exec-1]  Get all Publishers (UI) request has been called. 
+2021-05-30 12:15:07,535 INFO e.b.c.c.u.PenaltyUIController [http-nio-1010-exec-3]  Get all Penalties (UI) request has been called. 
+2021-05-30 12:15:12,286 INFO e.b.c.c.u.PenaltySystemUIController [http-nio-1010-exec-6]  Get all Damages (UI) request has been called. 
+2021-05-30 12:15:16,432 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-8]  Get all Library Members (UI) request has been called. 
+2021-05-30 12:15:25,854 INFO e.b.c.c.u.PersonnelUIController [http-nio-1010-exec-10]  Get all Workers (UI) request has been called. 
+2021-05-30 12:15:32,198 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-2]  Get all Books (UI) request has been called. 
+2021-05-30 12:15:36,767 INFO e.b.c.c.u.RentingUIController [http-nio-1010-exec-4]  Get all Rented Books (UI) request has been called. 
+2021-05-30 16:57:10,184 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 12224 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 16:57:10,219 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 16:57:13,062 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 16:57:13,420 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 353 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 16:57:14,876 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 16:57:14,894 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 16:57:14,895 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 16:57:14,896 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 16:57:15,154 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 16:57:15,154 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4851 ms
+2021-05-30 16:57:15,915 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 16:57:16,503 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 16:57:16,778 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 16:57:16,782 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 16:57:19,284 INFO o.m.d.connection [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:323638}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,284 INFO o.m.d.connection [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:398493}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,285 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1320609400, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 16:57:19 EEST 2021, lastUpdateTimeNanos=376796788208900}
+2021-05-30 16:57:19,285 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1317865300, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 16:57:19 EEST 2021, lastUpdateTimeNanos=376796788209000}
+2021-05-30 16:57:19,285 INFO o.m.d.connection [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:324751}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,286 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1322372400, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 16:57:19 EEST 2021, lastUpdateTimeNanos=376796789629600}
+2021-05-30 16:57:19,286 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,286 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,287 INFO o.m.d.cluster [cluster-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,288 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:324751}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,290 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:323807}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 16:57:19,348 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b399bba1081f0c2253013b', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:398493}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:57:20,370 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27dbaa33, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b47b7f5, org.springframework.security.web.header.HeaderWriterFilter@9f9146d, org.springframework.security.web.authentication.logout.LogoutFilter@3b57f915, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d1c5cf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b6b5352, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1322b575, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15d65fcf, org.springframework.security.web.session.SessionManagementFilter@203765b2, org.springframework.security.web.access.ExceptionTranslationFilter@4b5ad306, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30517a57]
+2021-05-30 16:57:20,445 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 16:57:20,608 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 16:57:21,419 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 16:57:21,444 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 16:57:21,455 INFO e.b.c.CourseApplication [main] Started CourseApplication in 13.827 seconds (JVM running for 16.737)
+2021-05-30 16:58:56,805 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 16:58:56,805 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 16:58:56,810 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 5 ms
+2021-05-30 16:59:09,385 INFO e.b.c.c.u.BookUIController [http-nio-1010-exec-4]  Get all Books (UI) request has been called. 
+2021-05-30 16:59:09,820 INFO o.m.d.connection [http-nio-1010-exec-4] Opened connection [connectionId{localValue:7, serverValue:398816}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 16:59:30,031 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-6]  Get all Library Members (UI) request has been called. 
+2021-05-30 16:59:32,079 INFO e.b.c.c.r.PenaltyController [http-nio-1010-exec-7]  Count and sort all penalties per reader (API) query has been executed. 
+2021-05-30 16:59:32,176 INFO e.b.c.s.p.PenaltyServiceImpl [http-nio-1010-exec-7]  Count and sort all penalties per reader (Service) query has been executed. 
+2021-05-30 16:59:35,614 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-8]  Get all Library Members (UI) request has been called. 
+2021-05-30 16:59:43,053 INFO e.b.c.c.u.RentingUIController [http-nio-1010-exec-10]  Get all Rented Books (UI) request has been called. 
+2021-05-30 16:59:57,161 INFO e.b.c.c.u.PenaltyUIController [http-nio-1010-exec-3]  Get all Penalties (UI) request has been called. 
+2021-05-30 17:00:02,230 INFO e.b.c.c.u.PersonnelUIController [http-nio-1010-exec-5]  Get all Workers (UI) request has been called. 
+2021-05-30 17:00:08,543 INFO e.b.c.c.r.PersonnelController [http-nio-1010-exec-6]  Count and sort all workers based on their birthday (API) query has been executed. 
+2021-05-30 17:00:08,605 INFO e.b.c.s.p.PersonnelServiceImpl [http-nio-1010-exec-6]  Count and sort all workers based on their birthday (Service) query has been executed. 
+2021-05-30 17:00:10,724 INFO e.b.c.c.u.PersonnelUIController [http-nio-1010-exec-7]  Get all Workers (UI) request has been called. 
+2021-05-30 17:38:07,542 INFO e.b.c.c.u.AuthorUIController [http-nio-1010-exec-1]  Get all Authors (UI) request has been called. 
+2021-05-30 17:38:33,870 INFO o.s.a.AbstractOpenApiResource [http-nio-1010-exec-1] Init duration for springdoc-openapi is: 1609 ms
+2021-05-30 19:40:15,581 INFO e.b.c.CourseApplication [main] Starting CourseApplication using Java 14.0.2 on DESKTOP-L1BRBVA with PID 1360 (G:\BACKUP_G-D\Новая папка\Library (Course Project)\target\classes started by KB in G:\BACKUP_G-D\Новая папка\Library (Course Project))
+2021-05-30 19:40:15,607 INFO e.b.c.CourseApplication [main] No active profile set, falling back to default profiles: default
+2021-05-30 19:40:17,306 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-30 19:40:17,438 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 127 ms. Found 13 MongoDB repository interfaces.
+2021-05-30 19:40:17,835 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 1010 (http)
+2021-05-30 19:40:17,850 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-1010"]
+2021-05-30 19:40:17,850 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-05-30 19:40:17,851 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-30 19:40:17,962 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-05-30 19:40:17,962 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2264 ms
+2021-05-30 19:40:18,215 INFO o.m.d.cluster [main] Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=kj1.9vhtx.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-qkyyoz-shard-0'}
+2021-05-30 19:40:18,274 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-02.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 19:40:18,304 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-00.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 19:40:18,305 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-srv-kj1.9vhtx.mongodb.net] Adding discovered server kj1-shard-00-01.9vhtx.mongodb.net:27017 to client view of cluster
+2021-05-30 19:40:18,914 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:1, serverValue:325808}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,914 INFO o.m.d.connection [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:2, serverValue:401525}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,914 INFO o.m.d.connection [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:4, serverValue:326845}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,915 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:3, serverValue:401526}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,915 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-02.9vhtx.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=269279000, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-02.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000000b, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c7ebf24a3d8ab0e6d25, counter=6}, lastWriteDate=Sun May 30 19:40:19 EEST 2021, lastUpdateTimeNanos=386576418437900}
+2021-05-30 19:40:18,914 INFO o.m.d.connection [cluster-rtt-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:5, serverValue:326845}] to kj1-shard-00-01.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,914 INFO o.m.d.connection [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Opened connection [connectionId{localValue:6, serverValue:325925}] to kj1-shard-00-00.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,915 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-01.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-01.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=293599000, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-01.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0cac12da4ea438c37970, counter=3}, lastWriteDate=Sun May 30 19:40:19 EEST 2021, lastUpdateTimeNanos=386576418932300}
+2021-05-30 19:40:18,915 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-00.9vhtx.mongodb.net:27017] Monitor thread successfully connected to server with description ServerDescription{address=kj1-shard-00-00.9vhtx.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=291875900, setName='atlas-qkyyoz-shard-0', canonicalAddress=kj1-shard-00-00.9vhtx.mongodb.net:27017, hosts=[kj1-shard-00-00.9vhtx.mongodb.net:27017, kj1-shard-00-01.9vhtx.mongodb.net:27017, kj1-shard-00-02.9vhtx.mongodb.net:27017], passives=[], arbiters=[], primary='kj1-shard-00-02.9vhtx.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='WESTERN_EUROPE'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=609c0c5f12b3f146085dba29, counter=4}, lastWriteDate=Sun May 30 19:40:19 EEST 2021, lastUpdateTimeNanos=386576418785400}
+2021-05-30 19:40:18,916 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max election id to 7fffffff000000000000000b from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,917 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Setting max set version to 2 from replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:40:18,917 INFO o.m.d.cluster [cluster-ClusterId{value='60b3bff254cb224b4dca6024', description='null'}-kj1-shard-00-02.9vhtx.mongodb.net:27017] Discovered replica set primary kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:40:19,380 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cfcac13, org.springframework.security.web.context.SecurityContextPersistenceFilter@376b5cb2, org.springframework.security.web.header.HeaderWriterFilter@32dcfeea, org.springframework.security.web.authentication.logout.LogoutFilter@65e4cb84, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@598657cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@106cd9c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ab66127, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c25d0d1, org.springframework.security.web.session.SessionManagementFilter@71e2c6d8, org.springframework.security.web.access.ExceptionTranslationFilter@5cdf221a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60a01cb]
+2021-05-30 19:40:19,441 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-30 19:40:19,574 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2021-05-30 19:40:20,193 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-1010"]
+2021-05-30 19:40:20,215 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 1010 (http) with context path ''
+2021-05-30 19:40:20,224 INFO e.b.c.CourseApplication [main] Started CourseApplication in 5.39 seconds (JVM running for 7.194)
+2021-05-30 19:40:39,186 INFO o.a.c.c.C.[.[.[/] [http-nio-1010-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-30 19:40:39,186 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-30 19:40:39,188 INFO o.s.w.s.DispatcherServlet [http-nio-1010-exec-1] Completed initialization in 2 ms
+2021-05-30 19:40:48,084 INFO e.b.c.c.r.BookController [http-nio-1010-exec-4]  Get all Books (API) request has been called. 
+2021-05-30 19:40:48,482 INFO o.m.d.connection [http-nio-1010-exec-4] Opened connection [connectionId{localValue:7, serverValue:401403}] to kj1-shard-00-02.9vhtx.mongodb.net:27017
+2021-05-30 19:41:44,882 INFO e.b.c.c.r.ShiftController [http-nio-1010-exec-6]  Get all Shifts (API) request has been called. 
+2021-05-30 19:41:54,064 INFO e.b.c.c.r.PersonnelController [http-nio-1010-exec-7]  Get all Personnel (API) request has been called. 
+2021-05-30 19:42:09,846 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-8]  Get all Members (API) request has been called. 
+2021-05-30 19:42:21,959 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-9]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:43:00,749 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('i' (code 105)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('i' (code 105)): was expecting double-quote to start field name
+ at [Source: (PushbackInputStream); line: 3, column: 4]]
+2021-05-30 19:43:03,467 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-1]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:43:11,745 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('i' (code 105)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('i' (code 105)): was expecting double-quote to start field name
+ at [Source: (PushbackInputStream); line: 3, column: 4]]
+2021-05-30 19:43:18,709 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 12, column: 2] (through reference chain: edu.bid.course.model.Register["category"])]
+2021-05-30 19:43:21,995 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-4]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:43:35,130 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-5] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 11, column: 2] (through reference chain: edu.bid.course.model.Register["category"])]
+2021-05-30 19:43:48,388 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-1010-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 11, column: 2] (through reference chain: edu.bid.course.model.Register["category"])]
+2021-05-30 19:43:58,435 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-7]  Create new Member (API) request has been called. 
+2021-05-30 19:43:58,440 INFO e.b.c.s.r.RegisterServiceImpl [http-nio-1010-exec-7]  Create new Library Member (Service) request has been called. 
+2021-05-30 19:43:58,445 INFO e.b.c.d.r.RegisterDAOImpl [http-nio-1010-exec-7]  Create new Library Member (DAO) request has been called. 
+2021-05-30 19:44:07,908 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-8]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:44:07,970 ERROR f.runtime [http-nio-1010-exec-8] Error executing FreeMarker template
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> member.category.category  [in template "register/register-page.ftlh" at line 62, column 23]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${member.category.category}  [in template "register/register-page.ftlh" at line 62, column 21]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:370) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:644) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:334) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:340) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.process(Environment.java:313) [freemarker-2.3.30.jar:2.3.30]
+	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.30.jar:2.3.30]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67) [spring-webmvc-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:178) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) [spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+2021-05-30 19:44:07,991 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-1010-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> member.category.category  [in template "register/register-page.ftlh" at line 62, column 23]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${member.category.category}  [in template "register/register-page.ftlh" at line 62, column 21]
+----] with root cause
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> member.category.category  [in template "register/register-page.ftlh" at line 62, column 23]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${member.category.category}  [in template "register/register-page.ftlh" at line 62, column 21]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:370) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:644) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:334) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:340) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.process(Environment.java:313) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.30.jar:2.3.30]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:178) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+2021-05-30 19:44:08,011 ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView [http-nio-1010-exec-8] Cannot render error page for request [/ui/register/get/all] and exception [] as the response has already been committed. As a result, the response may have the wrong status code.
+2021-05-30 19:44:54,585 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-9]  Delete Member by id (API) with id 7 request has been called. 
+2021-05-30 19:44:59,913 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-10]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:45:32,587 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-2]  Create new Member (API) request has been called. 
+2021-05-30 19:45:32,587 INFO e.b.c.s.r.RegisterServiceImpl [http-nio-1010-exec-2]  Create new Library Member (Service) request has been called. 
+2021-05-30 19:45:32,588 INFO e.b.c.d.r.RegisterDAOImpl [http-nio-1010-exec-2]  Create new Library Member (DAO) request has been called. 
+2021-05-30 19:45:34,875 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-3]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:46:13,071 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-4]  Update Library Member Form (UI) has been called. 
+2021-05-30 19:46:17,233 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-5]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:46:18,510 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-6]  Delete Library Member (UI) by id with id 7 request has been called. 
+2021-05-30 19:46:18,588 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-7]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:47:44,760 INFO o.s.a.AbstractOpenApiResource [http-nio-1010-exec-8] Init duration for springdoc-openapi is: 1499 ms
+2021-05-30 19:48:54,645 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-3]  Get all Members (API) request has been called. 
+2021-05-30 19:49:56,769 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-5]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:50:43,757 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-7]  Create new Member (API) request has been called. 
+2021-05-30 19:50:43,758 INFO e.b.c.s.r.RegisterServiceImpl [http-nio-1010-exec-7]  Create new Library Member (Service) request has been called. 
+2021-05-30 19:50:43,758 INFO e.b.c.d.r.RegisterDAOImpl [http-nio-1010-exec-7]  Create new Library Member (DAO) request has been called. 
+2021-05-30 19:50:50,634 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-6]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:50:52,765 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-9]  Delete Library Member (UI) by id with id 7 request has been called. 
+2021-05-30 19:50:52,825 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-10]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:51:00,970 INFO e.b.c.c.r.RegisterController [http-nio-1010-exec-1]  Create new Member (API) request has been called. 
+2021-05-30 19:51:00,971 INFO e.b.c.s.r.RegisterServiceImpl [http-nio-1010-exec-1]  Create new Library Member (Service) request has been called. 
+2021-05-30 19:51:00,971 INFO e.b.c.d.r.RegisterDAOImpl [http-nio-1010-exec-1]  Create new Library Member (DAO) request has been called. 
+2021-05-30 19:51:06,271 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-3]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:51:12,318 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-2]  Update Library Member Form (UI) has been called. 
+2021-05-30 19:51:19,033 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-4]  Get all Library Members (UI) request has been called. 
+2021-05-30 19:51:20,322 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-5]  Delete Library Member (UI) by id with id 7 request has been called. 
+2021-05-30 19:51:20,387 INFO e.b.c.c.u.RegisterUIController [http-nio-1010-exec-7]  Get all Library Members (UI) request has been called. 
