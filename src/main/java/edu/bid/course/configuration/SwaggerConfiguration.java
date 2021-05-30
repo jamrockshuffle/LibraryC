@@ -24,6 +24,7 @@ public class SwaggerConfiguration {
                 .info(
                         new Info()
                                 .title("Курсовий проєкт (Бібліотека)")
+                                .description("Курсова робота Бідюка Миколи, студента 2-го курсу")
                                 .version("1.0")
                                 .contact(new Contact()
                                         .email("bidyuk.mykola@chnu.edu.ua")
