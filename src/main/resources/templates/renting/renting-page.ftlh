@@ -36,15 +36,15 @@
     <table class="table table-dark table-hover">
         <tr>
             <th>ID</th>
-            <th>Rented Book</th>
+            <th><a href="/ui/book/get/all">Rented Book</a></th>
             <th>Collateral Cost (UAH)</th>
             <th>Cost Per Day (UAH)</th>
-            <th>Renter</th>
+            <th><a href="/ui/register/get/all">Rented</a></th>
             <th>Renting Date</th>
             <th>Expected Return Date</th>
             <th>Actual Return Date</th>
             <th>Penalty (UAH)</th>
-            <th>Renting Person</th>
+            <th><a href="/ui/personnel/get/all">Renting Person</a></th>
             <th>Update</th>
             <th>Delete</th>
             <th>Created At</th>

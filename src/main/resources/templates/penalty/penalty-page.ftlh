@@ -36,9 +36,9 @@
     <table class="table table-dark table-hover">
         <tr>
             <th>ID</th>
-            <th>Rented Book</th>
-            <th>Reader</th>
-            <th>Penalty Clause</th>
+            <th><a href="/ui/renting/get/all">Rented Book</a></th>
+            <th><a href="/ui/register/get/all">Reader</a></th>
+            <th><a href="/ui/penaltysystem/get/all">Penalty Clause</a></th>
             <th>Penalty Sum</th>
             <th>Update</th>
             <th>Delete</th>

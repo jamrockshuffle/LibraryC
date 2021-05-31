@@ -37,11 +37,11 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Author</th>
-            <th>Genre</th>
+            <th><a href="/ui/author/get/all">Author</a></th>
+            <th><a href="/ui/genre/get/all">Genre</a></th>
             <th>Year of publishing</th>
-            <th>Publisher</th>
-            <th>Stillage</th>
+            <th><a href="/ui/publisher/get/all">Publisher</a></th>
+            <th><a href="/ui/stillage/get/all">Stillage</a></th>
             <th>Collateral Cost (UAH)</th>
             <th>Cost Per Day (UAH)</th>
             <th>Update</th>

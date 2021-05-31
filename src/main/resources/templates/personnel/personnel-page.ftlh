@@ -39,8 +39,8 @@
             <th>Last Name</th>
             <th>First Name</th>
             <th>Patronymic</th>
-            <th>Position</th>
-            <th>Shift</th>
+            <th><a href="/ui/position/get/all">Position</a></th>
+            <th><a href="/ui/shift/get/all">Shift</a></th>
             <th>Birthday</th>
             <th>Hiring Date</th>
             <th>Address</th>

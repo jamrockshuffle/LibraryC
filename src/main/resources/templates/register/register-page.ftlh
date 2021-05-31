@@ -42,7 +42,7 @@
             <th>Birthday</th>
             <th>Address</th>
             <th>Phone Number</th>
-            <th>Category</th>
+            <th><a href="/ui/discountsystem/get/all">Discount Category</a></th>
             <th>% discount</th>
             <th>Update</th>
             <th>Delete</th>
